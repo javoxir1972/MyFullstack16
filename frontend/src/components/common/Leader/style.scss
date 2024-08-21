@@ -1,0 +1,68 @@
+.leader {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    color: snow;
+    background-color: grey;
+
+    .leader-board {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 80px;
+        text-align: center;
+        color: snow;
+        font-family: sans-serif;
+    }
+
+    .nft-images {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: sans-serif;
+
+        .nft-n1,
+        .nft-n2,
+        .nft-n3,
+        .nft-n4,
+        .nft-n5 {
+            position: relative;
+        }
+
+        span {
+            font-weight: 700;
+            position: absolute;
+            padding: 5px;
+            color: black;
+            background-color: snow;
+            border-radius: 50%;
+            font-size: 10px;
+            left: 44%;
+            top: -10px;
+        }
+
+        div {
+            display: grid;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: large;
+            margin-top: 5px;
+        }
+
+        h4 {
+            margin-top: 5px;
+        }
+
+    }
+
+}

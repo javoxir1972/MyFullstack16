@@ -1,0 +1,184 @@
+.trending-art {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    .header-art {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        h1 {
+            font-family: sans-serif;
+        }
+
+    }
+
+    .center-art {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nft-first {
+            h4 {
+                font-family: sans-serif;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .nft-first-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+
+                .nft-first-bottom-left {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: sans-serif;
+
+                    img {
+                        margin-right: 5px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .nft-first-bottom-right {
+                    display: grid;
+                    text-align: center;
+                    font-family: sans-serif;
+
+                    h6 {
+                        color: grey;
+                    }
+                }
+            }
+        }
+
+        .nft-second {
+            h4 {
+                font-family: sans-serif;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .nft-second-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+
+                .nft-second-bottom-left {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: sans-serif;
+
+                    img {
+                        margin-right: 5px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .nft-second-bottom-right {
+                    display: grid;
+                    text-align: center;
+                    font-family: sans-serif;
+
+                    h6 {
+                        color: grey;
+                    }
+                }
+            }
+        }
+
+        .nft-third {
+            h4 {
+                font-family: sans-serif;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .nft-third-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+
+                .nft-third-bottom-left {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: sans-serif;
+
+                    img {
+                        margin-right: 5px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .nft-third-bottom-right {
+                    display: grid;
+                    text-align: center;
+                    font-family: sans-serif;
+
+                    h6 {
+                        color: grey;
+                    }
+                }
+            }
+        }
+
+        .nft-fourth {
+            h4 {
+                font-family: sans-serif;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .nft-fourth-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+
+                .nft-fourth-bottom-left {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: sans-serif;
+
+                    img {
+                        margin-right: 5px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .nft-fourth-bottom-right {
+                    display: grid;
+                    text-align: center;
+                    font-family: sans-serif;
+
+                    h6 {
+                        color: grey;
+                    }
+                }
+            }
+        }
+
+
+        img {
+            border-radius: 10px;
+        }
+        .nft-first,
+        .nft-second,
+        .nft-third,
+        .nft-fourth {
+            background-color: lightgrey;
+            padding: 10px 20px 10px 10px;
+            border-radius: 10px;
+        }
+    }
+}

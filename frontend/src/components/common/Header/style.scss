@@ -1,0 +1,43 @@
+.header {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-left {
+        font-family: sans-serif;
+        color: grey;
+
+        h6 {
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: black;
+            width: 290px;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            width: 340px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: pink;
+            color: snow;
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            padding: 10px 30px;
+        }
+    }
+
+    .header-right {
+        img {
+            border-radius: 20px;
+        }
+    }
+}
