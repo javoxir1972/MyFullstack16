@@ -40,19 +40,19 @@ button {
     padding: 10px;
     margin: 0 5px;
     border-radius: 5px;
+    background-color: $button-bg-color;
 
+    // &.delete-btn {
+    //     color: $light;
+    //     background: $red-gradient;
+    //     @include darken_bg_on_hover($red);
+    // }
 
-    &.delete-btn {
-        color: $light;
-        background: $red-gradient;
-        @include darken_bg_on_hover($red);
-    }
-
-    &.cancel-btn {
-        color: $light;
-        background: $green-gradient;
-        @include darken_bg_on_hover($green);
-    }
+    // &.cancel-btn {
+    //     color: $light;
+    //     background: $green-gradient;
+    //     @include darken_bg_on_hover($green);
+    // }
 }
 
 input {
@@ -64,35 +64,35 @@ input {
 
 
 
-.dropdown {
-    display: inline-block;
-    position: relative;
+// .dropdown {
+//     display: inline-block;
+//     position: relative;
 
-    .drp-content {
-        max-width: 180px;
-        position: absolute;
-        box-shadow: 0 8px 16px lightgray;
-        top: 37px;
-        left: 0px;
-        display: none;
+//     .drp-content {
+//         max-width: 180px;
+//         position: absolute;
+//         box-shadow: 0 8px 16px lightgray;
+//         top: 37px;
+//         left: 0px;
+//         display: none;
 
-        p {
-            padding: 10px 20px;
-            background-color: $violet-dark;
-            color: $black;
-            font-weight: normal;
-            font-family: sans-serif;
+//         p {
+//             padding: 10px 20px;
+//             background-color: $violet-dark;
+//             color: $black;
+//             font-weight: normal;
+//             font-family: sans-serif;
 
-            &:hover {
-                background-color: $violet;
-                color: $light;
-            }
-        }
-    }
+//             &:hover {
+//                 background-color: $violet;
+//                 color: $light;
+//             }
+//         }
+//     }
 
-    &:hover {
-        .drp-content {
-            display: block;
-        }
-    }
-}
+//     &:hover {
+//         .drp-content {
+//             display: block;
+//         }
+//     }
+// }

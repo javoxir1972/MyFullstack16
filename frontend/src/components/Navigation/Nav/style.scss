@@ -1,0 +1,46 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.nav {
+    padding: 10px 150px;
+    @include flex(row, center, space-between, 0);
+
+    background-color: red;
+
+    .nav-left {
+        @include flex();
+
+        input {
+            width: 285px;
+            height: 52px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            background-color: #F3F3F3;
+            color: #B7B7B7;
+            margin-left: 70px;
+        }
+    }
+
+    .nav-right {
+        @include flex();
+        background-color: grey;
+        color: snow;
+
+        a {
+            display: inline-block;
+            color: black;
+            padding: 0 15px;
+
+            &.active {
+                color: black;
+                font-weight: bold;
+            }
+
+            &:hover {
+                color: black;
+            }
+        }
+
+    }
+}

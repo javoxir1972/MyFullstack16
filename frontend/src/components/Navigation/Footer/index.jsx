@@ -1,5 +1,5 @@
 import "./style.scss"
-function Bottom() {
+function Footer() {
     return (
         <div className="bottom">
             <div className="image-phone">
@@ -101,6 +101,6 @@ function Bottom() {
     );
 }
 
-export default Bottom;
+export default Footer;
 
 
