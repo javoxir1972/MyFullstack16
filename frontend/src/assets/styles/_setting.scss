@@ -1,0 +1,44 @@
+// ------------------ Colors ------------------
+$main-bg-color: #FFFFFF;
+$button-bg-color: linear-gradient(108.39deg, #FF56BB 6.99%, #FF8F77 119.86%);
+$leaderboard-bg-color: #191919;
+$card-box-shadow: 0px 4.57px 54.85px 0px #C5C5C540;
+$card-color: #000000;
+$mobilenft-color: #151515;
+
+
+
+
+
+// ------------------ @media sizes ------------------
+$small: 600px;
+$medium: 950px;
+$large: 1200px;
+$x-large: 1350px;
+$xx-large: 1525px;
+
+// @media (max-width: $x-large) {}
+// @media (max-width: $large) {}
+// @media (max-width: $medium) {}
+// @media (max-width: $small) {}
+
+
+// ======================================================================
+// ======================= FLEX =========================================
+// ======================================================================
+@mixin flex($direction: row, $align: center, $justify: center, $gap: 10px) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+// ======================================================================12
+// ======================= GRID =========================================
+// ======================================================================
+@mixin grid($columns: 12, $size: 1fr, $gap: 10px) {
+    display: grid;
+    grid-template-columns: repeat($columns, $size);
+    gap: $gap;
+}
