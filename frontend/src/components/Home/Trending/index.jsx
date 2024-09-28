@@ -34,31 +34,10 @@ function TrendingArt() {
                                     current={product.current}
                                     number={product.number}
                                 />
-
                             </div>
                         )
                     })
                 }
-                {/* <div className="nft-art">
-                    <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg"
-                        alt="" width="267px" height="277px" />
-                    <h4>Exboot #1</h4>
-                    <div className="nft-art-bottom">
-                        <div className="nft-art-bottom-left">
-                            <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg" alt=""
-                                width="38px" height="38px" />
-                            <p>Richard</p>
-                        </div>
-                        <div className="nft-art-bottom-right">
-                            <div>
-                                <h6>Current Bid</h6>
-                            </div>
-                            <div>
-                                <h5>🔥3.421</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </div>
     );

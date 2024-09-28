@@ -1,0 +1,134 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.featured {
+    padding: 80px 150px;
+
+    .featured-header {
+        h1 {
+            font-size: 40px;
+            line-height: 40px;
+            font-family: sans-serif;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+    }
+
+    .featured-nft {
+        @include flex(row, center, space-between, 50px);
+
+        .featured-nft-container {
+            @include flex(row, flex-start, space-between, 30px);
+            padding: 15px 35px 15px 15px;
+
+            @include card_hover_featured($blur: 69px);
+            color: $card-color;
+            background-color: $main-bg-color;
+            border-radius: 10px;
+            box-shadow: $card-box-shadow;
+
+
+            .nft-left-container {
+                img {
+                    border-radius: 10px;
+                }
+
+                h4 {
+                    border: 10px blue dashed;
+                }
+
+            }
+
+            .nft-right-container {
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                .nft-left-ava {
+                    @include flex(row, center, flex-start, 0);
+                    margin-bottom: 25px;
+
+                    img {
+                        border-radius: 50%;
+                        margin-right: 5px;
+                    }
+
+                    h4 {
+                        font-size: 15px;
+                        line-height: 23px;
+                        font-weight: 700;
+                    }
+                }
+
+                .nft-right-titles {
+                    @include flex(column, start, flex-start, 15px);
+                    color: $card-color;
+
+                    h6 {
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: $main-grey-color;
+                        font-weight: 400;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 400;
+                    }
+
+                    .nft-price {
+                        @include flex(row, flex-start, space-between, 40px);
+                        margin-bottom: 15px;
+
+                        h6 {
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-weight: 400;
+                        }
+
+                        h5 {
+                            font-family: sans-serif;
+                        }
+                    }
+
+                    button {
+                        width: 223px;
+                        height: 50px;
+                        font-size: 15px;
+                        color: snow;
+                        border-radius: 15px;
+                        background: $button-bg-color;
+
+                        position: relative;
+                        z-index: 1;
+                        cursor: pointer;
+
+                        &::before {
+                            content: "";
+                            transition: 0.2s;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 200%;
+                            z-index: 0;
+                            background-color: violet;
+                        }
+
+                        &:hover::before {
+                            z-index: -1;
+                            left: 0;
+                            right: 0;
+                            border-radius: 15px;
+                        }
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

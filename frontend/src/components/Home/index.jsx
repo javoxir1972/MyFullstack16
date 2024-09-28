@@ -4,7 +4,7 @@ import { FaHome } from "react-icons/fa";
 import ImagePhone from "./ImagePhone";
 import UnclockUnique from "./UnclockUnique";
 import TrendingArt from "./Trending";
-
+import FeaturedCollections from "./Featured";
 function Home() {
     return (
         <div className="home-page-wrapper">
@@ -13,9 +13,9 @@ function Home() {
             </Heading>
             <UnclockUnique />
             <TrendingArt />
+            <FeaturedCollections />
+
             <ImagePhone />
-
-
         </div>
     );
 }
