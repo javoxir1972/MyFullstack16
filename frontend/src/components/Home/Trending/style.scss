@@ -1,0 +1,101 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.trending-art {
+    padding: 80px 150px;
+
+    .header-art {
+        @include flex(row, center, space-between, 0);
+        margin-bottom: 40px;
+
+        .header-art-left {
+            div {
+                color: $card-color;
+                font-size: 40px;
+                font-family: sans-serif;
+                font-weight: 700;
+                line-height: 40px;
+            }
+
+        }
+
+        .header-art-right {
+            div {
+                font-size: 15px;
+                color: $card-color;
+                font-family: sans-serif;
+                font-weight: 700;
+            }
+        }
+
+    }
+
+    .center-art {
+        @include flex(row, center, space-between, 0);
+
+        .nft-art {
+            @include card_hover($button-bg-color);
+            background-color: $main-bg-color;
+            color: $card-color;
+            padding: 10px 15px 20px 10px;
+            border-radius: 10px;
+            box-shadow: $card-box-shadow;
+
+            img {
+                border-radius: 10px;
+            }
+
+            h4 {
+                padding: 10px 0 10px 0;
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: 700;
+                line-height: 26px;
+            }
+
+            .nft-art-bottom {
+                @include flex(row, center, space-between, 0);
+                margin-bottom: 5px;
+
+                .nft-art-bottom-left {
+                    @include flex(row, center, space-between, 0);
+
+                    p {
+                        color: $card-color;
+                        font-weight: 700;
+                        font-family: sans-serif;
+                        font-size: 15px;
+                        line-height: 23px;
+                    }
+
+                    img {
+                        margin-right: 5px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .nft-art-bottom-right {
+                    display: grid;
+                    text-align: center;
+                    font-family: sans-serif;
+
+
+                    h6 {
+                        font-family: sans-serif;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: grey;
+                    }
+
+                    h5 {
+                        font-size: 15px;
+                        font-family: sans-serif;
+                        line-height: 16px;
+                        color: $card-color;
+                    }
+                }
+            }
+        }
+    }
+}

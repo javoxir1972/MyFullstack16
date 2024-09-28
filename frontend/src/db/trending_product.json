@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "hedtitle": "ExBoot #1",
+        "avatitle": "Peperzone",
+        "current": "Current Bid",
+        "number": "4.212"
+    },
+    {
+        "id": 2,
+        "hedtitle": "ExBoot #2",
+        "avatitle": "Richard",
+        "current": "Current Bid",
+        "number": "2.212"
+    },
+    {
+        "id": 3,
+        "hedtitle": "Future of Polygon X",
+        "avatitle": "Michael",
+        "current": "Current Bid",
+        "number": "3.212"
+    },
+    {
+        "id": 4,
+        "hedtitle": "Blue Wave #2",
+        "avatitle": "Antonson",
+        "current": "Current Bid",
+        "number": "1.212"
+    }
+]

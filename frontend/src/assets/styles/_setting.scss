@@ -5,7 +5,29 @@ $leaderboard-bg-color: #191919;
 $card-box-shadow: 0px 4.57px 54.85px 0px #C5C5C540;
 $card-color: #000000;
 $mobilenft-color: #151515;
+$main-grey-color: #6B6B6B;
 
+
+// ====================================================
+$violet: #7E33E0;
+$violet-light: #F6F5FF;
+$violet-dark: #F1F0FF;
+
+$green: #08D15F;
+$green-light: #EBF4F3;
+$border: #d6d5db;
+
+$red: #FB2E86;
+$darkest-blue: #0D0E43;
+$light-blue: #9096B2;
+$light: #FFFFFF;
+$black: #111;
+// =====================================================
+$red-gradient: linear-gradient(to right, #FB2E86, #ff8f77);
+$purple-gradient: linear-gradient(to right, #6e56ff, #9b73ff, #7E33E0);
+$green-gradient: linear-gradient(to right, #56c2ff, #08D15F);
+
+$danger-modal-bg: radial-gradient(circle, $light 50%, #a084c5);
 
 
 
@@ -41,4 +63,59 @@ $xx-large: 1525px;
     display: grid;
     grid-template-columns: repeat($columns, $size);
     gap: $gap;
+}
+
+// ======================================================================12
+// ======================================================================
+// ======================================================================
+
+// @mixin darken_bg_on_hover($color, $percent: 20%) {
+//     position: relative;
+//     z-index: 1;
+
+//     &::before {
+//         content: "";
+//         transition: 0.4s;
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 100%;
+//         z-index: 0;
+//         background: darken($color, $percent);
+//     }
+
+//     &:hover::before {
+//         z-index: -1;
+//         left: 0;
+//         right: 0;
+//     }
+// }
+
+@mixin card_hover($color: $violet) {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        transition: 0.2s;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 200%;
+        z-index: 0;
+        background-color: $color;
+    }
+
+    &:hover::before {
+        z-index: -1;
+        left: 0;
+        right: 0;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }

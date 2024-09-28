@@ -10,8 +10,6 @@ function AllComponents(props) {
                 {/* http://localhost:5173/ */}
                 <Route index element={<Home />} />
 
-
-
                 {/* http://localhost:5173/contact */}
                 {/* <Route path="contacts" element={<Contacts />} /> */}
             </Route>

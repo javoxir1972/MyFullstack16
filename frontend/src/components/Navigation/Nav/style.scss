@@ -2,10 +2,8 @@
 @import "../../../assets/styles/setting";
 
 .nav {
-    padding: 10px 150px;
+    padding: 10px 200px;
     @include flex(row, center, space-between, 0);
-
-    background-color: red;
 
     .nav-left {
         @include flex();
@@ -23,22 +21,16 @@
     }
 
     .nav-right {
-        @include flex();
-        background-color: grey;
-        color: snow;
+        @include flex(row, end, space-between, 50px);
 
         a {
             display: inline-block;
-            color: black;
-            padding: 0 15px;
-
-            &.active {
-                color: black;
-                font-weight: bold;
-            }
+            color: grey;
 
             &:hover {
                 color: black;
+                font-weight: bold;
+
             }
         }
 

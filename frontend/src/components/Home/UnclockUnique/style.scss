@@ -1,0 +1,56 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.unclock {
+    padding: 80px 150px;
+    @include flex(row, start, space-between, 50px);
+
+    .unclock-left {
+        height: 520px;
+        @include flex(column, flex-start, flex-start, 25px);
+        font-family: sans-serif;
+        color: $main-grey-color;
+
+        h1 {
+            span {
+                display: inline-block;
+                color: black;
+                font-size: 65px;
+                font-family: Clash Display Variable;
+                margin-bottom: 7px;
+                font-weight: 600;
+            }
+        }
+
+        h5 {
+            font-size: 25px;
+
+            span {
+                display: inline-block;
+                margin-bottom: 15px;
+            }
+        }
+
+        h6 {
+            word-spacing: 5px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+
+        button {
+            font-size: 18px;
+            margin-top: 30px;
+            border-radius: 15px;
+            padding: 15px 50px;
+            color: $main-bg-color;
+            background: $button-bg-color;
+        }
+    }
+
+    .unclock-right {
+        img {
+            border-radius: 20px;
+        }
+    }
+}
