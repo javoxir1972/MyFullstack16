@@ -5,6 +5,8 @@ import ImagePhone from "./ImagePhone";
 import UnclockUnique from "./UnclockUnique";
 import TrendingArt from "./Trending";
 import FeaturedCollections from "./Featured";
+import LeaderBoard from "./Leader";
+
 function Home() {
     return (
         <div className="home-page-wrapper">
@@ -14,6 +16,8 @@ function Home() {
             <UnclockUnique />
             <TrendingArt />
             <FeaturedCollections />
+            <LeaderBoard />
+            
 
             <ImagePhone />
         </div>
