@@ -11,6 +11,6 @@ function Item(props) {
             </h4>
             <span className="nft-number">{props.titlenumber}</span>
         </div>
-    );
+    ); 
 }
 export default Item;

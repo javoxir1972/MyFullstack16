@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "avatitle": "Peperzone",
+        "titles": "Peperzone",
         "hedtitle": "ExBoot #1",
         "description": "Description",
         "title1": "We would like to present you The",
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "avatitle": "Richard",
+        "titles": "Richard",
         "hedtitle": "ExBoot #2",
         "description": "Description",
         "title1": "We would like to present you The",
