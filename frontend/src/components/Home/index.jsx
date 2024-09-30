@@ -6,6 +6,7 @@ import UnclockUnique from "./UnclockUnique";
 import TrendingArt from "./Trending";
 import FeaturedCollections from "./Featured";
 import LeaderBoard from "./Leader";
+import Explore from "./Explore";
 
 function Home() {
     return (
@@ -17,7 +18,7 @@ function Home() {
             <TrendingArt />
             <FeaturedCollections />
             <LeaderBoard />
-            
+            <Explore />
 
             <ImagePhone />
         </div>

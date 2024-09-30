@@ -1,0 +1,109 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.explore-nft {
+    padding: 80px 150px;
+
+    .header-nft {
+        @include flex(row, center, space-between, 0);
+        margin-bottom: 50px;
+
+        .left {
+            h1 {
+                font-family: sans-serif;
+                font-size: 40px;
+                line-height: 40px;
+                font-weight: 700;
+            }
+
+        }
+
+        .right {
+            button {
+                padding: 10px 28px;
+                border-radius: 20px;
+                border: 1px black solid;
+                outline: none;
+
+                font-size: 15px;
+                line-height: 23px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .nft {
+        @include grid(4, 1fr, 20px);
+
+        .nft-container {
+            background-color: $main-bg-color;
+            box-shadow: $card-box-shadow;
+            padding: 10px 15px 10px 10px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+
+            img {
+                border-radius: 5px;
+            }
+
+            h4 {
+                font-family: sans-serif;
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: 700;
+            }
+
+            .nft-container-bottom {
+                @include flex(row, center, space-between, 0);
+                margin-bottom: 5px;
+
+                .nft-container-bottom-left {
+                    @include flex(row, center, space-between, 0);
+
+                    p {
+                        font-size: 15px;
+                        line-height: 23px;
+                        font-weight: 700;
+                    }
+
+                    img {
+                        margin-right: 9px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .nft-container-bottom-right {
+                    @include flex(column, center, space-between, 0);
+                    font-family: sans-serif;
+                    margin-right: 10px;
+                    h6 {
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 400;
+                        color: grey;
+                    }
+
+                    h5 {
+                        width: 50px;
+                        height: 23px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-nft {
+        @include flex(row, center);
+
+        button {
+            padding: 10px 25px;
+            border-radius: 15px;
+            border: 1px $card-color solid;
+        }
+    }
+}

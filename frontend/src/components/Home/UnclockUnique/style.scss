@@ -42,9 +42,16 @@
             font-size: 18px;
             margin-top: 30px;
             border-radius: 15px;
-            padding: 15px 50px;
             color: $main-bg-color;
+            padding: 15px 50px;
             background: $button-bg-color;
+
+            &:hover {
+                box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+                outline-color: rgba(255, 255, 255, 0);
+                outline-offset: 15px;
+                text-shadow: 2px 2px 2px #427388;
+            }
         }
     }
 

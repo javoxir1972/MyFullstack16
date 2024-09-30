@@ -8,7 +8,7 @@ import Img4 from "../../../assets/images/narutoandsuske.jpg"
 
 function TrendingArt() {
     let imgs1 = [Img1, Img2, Img3, Img4];
-    let imgs2 = [Img4, Img3, Img2, Img1];
+    let imgs2 = [Img4, Img3, Img2, Img1]; 
 
     return (
         <div className="trending-art">
@@ -38,7 +38,7 @@ function TrendingArt() {
                         )
                     })
                 }
-            </div>
+            </div> 
         </div>
     );
 }

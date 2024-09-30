@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "ExBoot #1",
+        "name": "Peperzone",
+        "current": "Current Bid",
+        "number": "4.321"
+    },
+    {
+        "id": 2,
+        "title": "ExBoot #2",
+        "name": "Richard",
+        "current": "Current Bid",
+        "number": "3.321"
+    },
+    {
+        "id": 3,
+        "title": "ExBoot #3",
+        "name": "Michael",
+        "current": "Current Bid",
+        "number": "9.321"
+    },
+    {
+        "id": 4,
+        "title": "ExBoot #4",
+        "name": "Antonson",
+        "current": "Current Bid",
+        "number": "7.321"
+    },
+    {
+        "id": 5,
+        "title": "ExBoot #5",
+        "name": "Gulsanam",
+        "current": "Current Bid",
+        "number": "1.321"
+    }
+]

@@ -35,7 +35,7 @@ function FeaturedCollections() {
                                     leftnumber={product.leftnumber}
 
                                     rightcurrent={product.rightcurrent}
-                                    rightnumber={product.rightnumber}
+                                    righttime={product.righttime}
                                 />
                             </div>
                         )
