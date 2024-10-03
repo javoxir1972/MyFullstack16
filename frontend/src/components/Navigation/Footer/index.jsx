@@ -1,12 +1,16 @@
 import "./style.scss"
+import { Link, NavLink } from "react-router-dom";
+
 function Footer() {
+
     return (
         <div className="bottom">
             <div className="bottom-over">
                 <div className="left">
-                    <img src="https://kartin.papik.pro/uploads/posts/2023-07/thumbs/1688346609_kartin-papik-pro-p-kartinki-krug-kvadrat-treugolnik-zvezda-45.jpg"
-                        alt="" width="80px" height="40px" />
-
+                    <Link to={"/"}>
+                        <img src="https://kartin.papik.pro/uploads/posts/2023-07/thumbs/1688346609_kartin-papik-pro-p-kartinki-krug-kvadrat-treugolnik-zvezda-45.jpg"
+                            alt="" width="80px" height="40px" />
+                    </Link>
                     <h1>NFT Distro</h1>
                     <h6>
                         Experience the Revolutionary World of Non-Fungible <br />
@@ -24,38 +28,20 @@ function Footer() {
 
                 <div className="right">
                     <div>
-                        <b>Company</b>
-                        <br />
-                        <br />
-                        <h6>
-                            Explore
-                        </h6>
-                        <br />
-                        <h6>
-                            About
-                        </h6>
+                        <h4>Company</h4>
+                        <NavLink to="Discover" activeclassname="active">Discover</NavLink>
+                        <NavLink to="About" activeclassname="active">About</NavLink>
                     </div>
                     <div>
-                        <b>Creator</b>
-                        <br />
-                        <br />
-                        <h6>
-                            FAQ
-                        </h6>
-                        <br />
-                        <h6>
-                            Become Artist
-                        </h6>
+                        <h4>Creator</h4>
+                        <NavLink to="FAQ" activeclassname="active">FAQ</NavLink>
+                        <NavLink to="Become" activeclassname="active">Become Artist</NavLink>
                     </div>
                     <div>
-                        <b>Join our community</b>
-                        <br />
-                        <br />
+                        <h4>Join our community</h4>
                         <input type="text" placeholder="Enter you email address" />
-
                     </div>
                 </div>
-
             </div>
             <div className="icons">
                 <div className="left">
@@ -64,18 +50,10 @@ function Footer() {
                     </h6>
                 </div>
                 <div className="right">
-                    <span>
-                        👁️
-                    </span>
-                    <span>
-                        🌙
-                    </span>
-                    <span>
-                        🔍
-                    </span>
-                    <span>
-                        ⭕
-                    </span>
+                    <span>👁️</span>
+                    <span>🌙</span>
+                    <span>🔍</span>
+                    <span>⭕</span>
                 </div>
             </div>
         </div>

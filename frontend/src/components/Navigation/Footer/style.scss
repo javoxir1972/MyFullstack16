@@ -1,28 +1,36 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
 .bottom {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 250px;
-
-
-
+    padding: 50px 150px;
 
     .bottom-over {
-        display: grid;
-        grid-template-columns: 1.3fr 2fr;
+        @include flex(row, start, space-between, 0);
+        color: $black;
         font-family: sans-serif;
-        color: black;
-        margin-bottom: 20px;
 
         .left {
-            display: grid;
-            gap: 15px;
+            @include flex(column, start, space-between, 10px);
+
+            img {
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 42px;
+                line-height: 51px;
+                font-weight: 500;
+            }
 
             h6 {
-                color: grey;
+                font-size: 15px;
+                line-height: 23px;
+                font-weight: 400;
+                color: $main-grey-color;
             }
 
             .dark-theme {
-                display: flex;
+                @include flex();
                 font-size: 20px;
 
                 .perek {
@@ -32,6 +40,7 @@
                     .soln {
                         margin-left: 0.5px;
                         margin-top: 1px;
+                        margin-bottom: 0.5px;
                         width: 25px;
                         height: 25px;
                         margin-right: 20px;
@@ -44,21 +53,45 @@
         }
 
         .right {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            color: snow;
+            margin-top: 40px;
+            @include flex(row, start, space-between, 50px);
 
             div {
                 input {
-                    padding: 15px 20px;
-                    border-radius: 25px;
-                    outline: none;
+                    width: 306px;
+                    height: 68px;
+                    border-radius: 35px;
+                    background-color: $main-bg-color;
                     border: 1px black solid;
+                    font-size: 15px;
+                    line-height: 23px;
+                    font-weight: 400;
                 }
 
-                h6 {
-                    color: grey;
+                h4 {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 26px;
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    font-size: 15px;
+                    line-height: 23px;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                    color: $main-grey-color;
+                    display: block;
+
+                    &.active {
+                        color: $red;
+                        font-weight: bold;
+                    }
+
+                    &:hover {
+                        color: red;
+                    }
+
                 }
             }
 
@@ -67,30 +100,38 @@
     }
 
     .icons {
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: sans-serif;
-        padding-bottom: 30px;
+        @include flex(row, center, flex-start, 67%);
+        padding-top: 50px;
 
         .left {
             color: grey;
 
+            h6 {
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: 400;
+            }
+
             span {
+                font-weight: bolder;
                 color: black;
                 margin-right: 10px;
-                padding: 1px 3px 1px 3px;
+                padding: 3px 3.5px 0.5px 3.5px;
                 border-radius: 50%;
-                border: 1px black solid;
+                border: 2px black solid;
             }
         }
 
         .right {
+            @include flex(row, center, space-between, 20px);
+
             span {
-                padding: 3px;
-                border-radius: 10px;
-                margin-left: 15px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                padding: 2.5px 3px 5px 3px;
+                border-radius: 50%;
+                background-color: $icon-bg;
             }
         }
 
