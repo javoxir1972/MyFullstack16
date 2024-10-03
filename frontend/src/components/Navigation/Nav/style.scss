@@ -2,7 +2,7 @@
 @import "../../../assets/styles/setting";
 
 .nav {
-    padding: 10px 200px;
+    padding: 50px 200px;
     @include flex(row, center, space-between, 0);
 
     .nav-left {
@@ -14,8 +14,8 @@
             border-radius: 20px;
             outline: none;
             border: none;
-            background-color: #F3F3F3;
-            color: #B7B7B7;
+            background-color: $input-bg;
+            color: $input-color;
             margin-left: 70px;
         }
     }
@@ -26,11 +26,15 @@
         a {
             display: inline-block;
             color: grey;
+            padding: 0 15px;
+
+            &.active {
+                color: $card-color;
+                font-weight: bold;
+            }
 
             &:hover {
-                color: black;
-                font-weight: bold;
-
+                color: $card-color;
             }
         }
 

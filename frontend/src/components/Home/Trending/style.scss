@@ -32,7 +32,7 @@
 
     .center-art {
         @include flex(row, center, space-between, 0);
-
+        
         .nft-art {
             @include card_hover($button-bg-color);
             background-color: $main-bg-color;
