@@ -7,7 +7,7 @@ function Item(props) {
             </div>
             <div className="nft-container-bottom">
                 <div className="nft-container-bottom-left">
-                    <img src={props.imgs2} alt="" width="38px" height="38px" />
+                    <img src={props.imgs2} alt="" width="38px" height="38px" /> 
                     <p>{props.name}</p>
                 </div>
                 <div className="nft-container-bottom-right">

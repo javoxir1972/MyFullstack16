@@ -1,5 +1,11 @@
 import "./style.scss"
+// const contentVue = document.querySelector(".element");
+// let button = document.querySelector(".btn")
 
+// button.addEventListener("click", function (evt) {
+//     evt.preventDefault();
+//     contentVue.classList.toggle("element-hidden")
+// })
 function Frequently() {
     return (
         <div className="frequently-wrapper">
@@ -15,8 +21,8 @@ function Frequently() {
                 </div>
             </div>
             <div className="center">
-                <button className="btn"></button>
-                <div className="element"></div>
+                {/* <button className="btn">What is an NFT marketplace?</button> */}
+                {/* <div className="element element-hidden">I don't now bro my names is chiki chiki sleym chedy</div> */}
             </div>
         </div>
     );

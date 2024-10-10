@@ -8,7 +8,7 @@
         @include flex(column, center, space-between, 0);
         text-align: center;
 
-        h6 { 
+        h6 {
             color: grey;
             font-size: 14px;
             line-height: 24px;
@@ -71,5 +71,39 @@
 
     .center {
         @include flex();
+
+        // .btn {
+        //     position: absolute;
+        //     z-index: 1;
+        //     width: 150px;
+        //     height: 150px;
+        //     border: none;
+        //     background-color: blue;
+
+        //     &:hover {
+        //         background-color: red;
+        //         cursor: pointer;
+        //     }
+
+        //     &:active {
+        //         background-color: yellow;
+        //         color: aqua;
+        //         border: 1px red solid;
+        //         cursor: pointer;
+        //     }
+
+        //     .element {
+        //         width: 150px;
+        //         height: 150px;
+        //         background-color: green;
+        //         transform: translateY(-100%);
+        //         transition: 1s;
+        //     }
+
+        //     .element-hidden {
+        //         transform: translateY(0);
+        //     }
+
+        // }
     }
 }

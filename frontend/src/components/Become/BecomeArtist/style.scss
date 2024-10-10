@@ -1,0 +1,451 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.becomeartist {
+    padding: 50px 150px;
+    position: relative;
+
+    .become-header {
+        @include flex(column, center, space-between, 20px);
+        text-align: center;
+
+        .left {
+            position: absolute;
+
+            .nft-container1 {
+                position: absolute;
+                right: 255%;
+                bottom: 80px;
+                @include card_hover($button-bg-color);
+                background-color: $main-bg-color;
+                box-shadow: $card-box-shadow;
+                padding: 8px 8px 8px 8px;
+                border-radius: 10px;
+                margin-bottom: 50px;
+
+                .img-wrapper {
+                    img {
+                        width: 100%;
+                        border-radius: 5px;
+                    }
+
+                    h4 {
+                        @include flex(row, start, start, 0);
+                        font-family: sans-serif;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        font-weight: 700;
+                    }
+                }
+
+                .nft-container-bottom {
+                    @include flex(row, center, space-between, 0);
+                    margin-bottom: 5px;
+
+                    .nft-container-bottom-left {
+                        @include flex(row, center, space-between, 0);
+
+                        p {
+                            font-size: 10px;
+                            line-height: 16px;
+                            font-weight: 700;
+                        }
+
+                        img {
+                            margin-right: 9px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .nft-container-bottom-right {
+                        @include flex(column, center, space-between, 0);
+                        font-family: sans-serif;
+                        margin-right: 10px;
+
+                        h6 {
+                            font-size: 9px;
+                            line-height: 12px;
+                            font-weight: 400;
+                            color: grey;
+                        }
+
+                        h5 {
+                            @include flex();
+                            width: 35px;
+                            height: 17px;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            .nft-container2 {
+                position: absolute;
+                right: 210%;
+                bottom: 200px;
+                @include card_hover($button-bg-color);
+                background-color: $main-bg-color;
+                box-shadow: $card-box-shadow;
+                padding: 8px 8px 8px 8px;
+                border-radius: 10px;
+                margin-bottom: 50px;
+
+                .img-wrapper {
+                    img {
+                        border-radius: 5px;
+                    }
+
+                    h4 {
+                        @include flex(row, start, start, 0);
+                        font-family: sans-serif;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        font-weight: 700;
+                    }
+                }
+
+                .nft-container-bottom {
+                    @include flex(row, center, space-between, 0);
+                    margin-bottom: 5px;
+
+                    .nft-container-bottom-left {
+                        @include flex(row, center, space-between, 0);
+
+                        p {
+                            font-size: 10px;
+                            line-height: 16px;
+                            font-weight: 700;
+                        }
+
+                        img {
+                            margin-right: 9px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .nft-container-bottom-right {
+                        @include flex(column, center, space-between, 0);
+                        font-family: sans-serif;
+                        margin-right: 10px;
+
+                        h6 {
+                            font-size: 9px;
+                            line-height: 12px;
+                            font-weight: 400;
+                            color: grey;
+                        }
+
+                        h5 {
+                            @include flex();
+                            width: 35px;
+                            height: 17px;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        h1 {
+            font-size: 69px;
+            line-height: 85px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+        }
+
+        button {
+            margin-top: 30px;
+            width: 245px;
+            height: 60px;
+            border-radius: 15px;
+            padding: 15px;
+            font-size: 18px;
+            line-height: 26px;
+            background: $button-bg-color;
+            color: $main-bg-color;
+        }
+
+        .right {
+            @include flex(row, center, space-between, 0);
+
+            .nft-container3 {
+                left: 160%;
+                bottom: 130px;
+                @include card_hover($button-bg-color);
+                background-color: $main-bg-color;
+                box-shadow: $card-box-shadow;
+                padding: 8px 8px 8px 8px;
+                border-radius: 10px;
+                margin-bottom: 50px;
+
+                .img-wrapper {
+                    img {
+                        border-radius: 5px;
+                    }
+
+                    h4 {
+                        @include flex(row, start, start, 0);
+                        font-family: sans-serif;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        font-weight: 700;
+                    }
+                }
+
+                .nft-container-bottom {
+                    @include flex(row, center, space-between, 0);
+                    margin-bottom: 5px;
+
+                    .nft-container-bottom-left {
+                        @include flex(row, center, space-between, 0);
+
+                        p {
+                            font-size: 10px;
+                            line-height: 16px;
+                            font-weight: 700;
+                        }
+
+                        img {
+                            margin-right: 9px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .nft-container-bottom-right {
+                        @include flex(column, center, space-between, 0);
+                        font-family: sans-serif;
+                        margin-right: 10px;
+
+                        h6 {
+                            font-size: 9px;
+                            line-height: 12px;
+                            font-weight: 400;
+                            color: grey;
+                        }
+
+                        h5 {
+                            @include flex();
+                            width: 35px;
+                            height: 17px;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+
+            .nft-container4 {
+                left: 85%;
+                bottom: 335px;
+                @include card_hover($button-bg-color);
+                background-color: $main-bg-color;
+                box-shadow: $card-box-shadow;
+                padding: 8px 8px 8px 8px;
+                border-radius: 10px;
+                margin-bottom: 50px;
+
+                .img-wrapper {
+                    img {
+                        border-radius: 5px;
+                    }
+
+                    h4 {
+                        @include flex(row, start, start, 0);
+                        font-family: sans-serif;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        font-weight: 700;
+                    }
+                }
+
+                .nft-container-bottom {
+                    @include flex(row, center, space-between, 0);
+                    margin-bottom: 5px;
+
+                    .nft-container-bottom-left {
+                        @include flex(row, center, space-between, 0);
+
+                        p {
+                            font-size: 10px;
+                            line-height: 16px;
+                            font-weight: 700;
+                        }
+
+                        img {
+                            margin-right: 9px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .nft-container-bottom-right {
+                        @include flex(column, center, space-between, 0);
+                        font-family: sans-serif;
+                        margin-right: 10px;
+
+                        h6 {
+                            font-size: 9px;
+                            line-height: 12px;
+                            font-weight: 400;
+                            color: grey;
+                        }
+
+                        h5 {
+                            @include flex();
+                            width: 35px;
+                            height: 17px;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .become-center {
+        h1 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 45px;
+            line-height: 55px;
+            font-weight: 500;
+        }
+
+        p {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+        }
+
+        button {
+            @include flex(row, center, center, 0);
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 185px;
+            height: 45px;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 700;
+            padding: 20px;
+            border-radius: 20px;
+            color: snow;
+            background-color: #6E56FF;
+
+        }
+
+        .become-top,
+        .become-center,
+        .become-bottom {
+            @include flex(row, center, flex-start, 180px);
+        }
+
+        .become-top {
+
+            .left {
+                box-shadow: $card-box-shadow;
+                @include card_hover($button-bg-color);
+
+                div {
+                    @include flex(column, center, center, 0);
+                    width: 386px;
+                    height: 361px;
+                    background-color: $main-bg-color;
+                    background: radial-gradient(50% 50% at 50% 50%, #FFC27A 0%, rgba(255, 119, 21, 0.5) 50%, rgba(250, 237, 255, 0) 100%);
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    h2 {
+                        font-size: 26px;
+                        line-height: 32px;
+                        font-weight: 500;
+                    }
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .right {}
+        }
+
+        .become-center {
+            .left {}
+
+            .right {
+                box-shadow: $card-box-shadow;
+                @include card_hover($button-bg-color);
+
+                div {
+                    @include flex(column, center, center, 0);
+                    width: 386px;
+                    height: 361px;
+                    background-color: $main-bg-color;
+                    background: radial-gradient(50% 50% at 50% 50%, #FFC27A 0%, rgba(255, 119, 21, 0.5) 50%, rgba(250, 237, 255, 0) 100%);
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    h2 {
+                        font-size: 26px;
+                        line-height: 32px;
+                        font-weight: 500;
+                    }
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        .become-bottom {
+            .left {
+                box-shadow: $card-box-shadow;
+                @include card_hover($button-bg-color);
+
+                div {
+                    @include flex(column, center, center, 0);
+                    width: 386px;
+                    height: 361px;
+                    background-color: $main-bg-color;
+                    background: radial-gradient(50% 50% at 50% 50%, #FFC27A 0%, rgba(255, 119, 21, 0.5) 50%, rgba(250, 237, 255, 0) 100%);
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    h2 {
+                        font-size: 26px;
+                        line-height: 32px;
+                        font-weight: 500;
+                    }
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .right {}
+        }
+
+    }
+}
