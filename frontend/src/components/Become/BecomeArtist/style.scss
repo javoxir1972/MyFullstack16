@@ -318,6 +318,7 @@
     }
 
     .become-center {
+        padding-bottom: 80px;
         h1 {
             margin-top: 15px;
             margin-bottom: 15px;
@@ -384,11 +385,9 @@
                 }
             }
 
-            .right {}
         }
 
         .become-center {
-            .left {}
 
             .right {
                 box-shadow: $card-box-shadow;
@@ -444,7 +443,6 @@
                 }
             }
 
-            .right {}
         }
 
     }
