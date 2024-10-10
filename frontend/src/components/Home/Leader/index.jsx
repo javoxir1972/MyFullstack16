@@ -1,14 +1,15 @@
 import "./style.scss"
 import Item from "./Item"
 import LProductJson from "../../../db/leaderboard_product.json"
-import Img1 from "../../../assets/images/7hokage.jpg"
-import Img2 from "../../../assets/images/dam.jpg"
-import Img3 from "../../../assets/images/narutokid.jpg"
-import Img4 from "../../../assets/images/narutoandsuske.jpg"
-import Img5 from "../../../assets/images/MadaraAndObito.jpg"
+
+import Img1 from "../../../assets/images/LeaderBoardAva/Peperzone.png"
+import Img2 from "../../../assets/images/LeaderBoardAva/Richard.png"
+import Img3 from "../../../assets/images/LeaderBoardAva/Anderson.png"
+import Img4 from "../../../assets/images/LeaderBoardAva/Michael.png"
+import Img5 from "../../../assets/images/LeaderBoardAva/Antonson.png"
 
 function LeaderBoard() {
-    let imgs = [Img1, Img2, Img3, Img4, Img5];
+    let imgs = [Img1, Img2, Img3, Img4, Img5]
     return (
         <div className="leader">
             <div className="leader-board">

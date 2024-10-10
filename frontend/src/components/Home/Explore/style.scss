@@ -36,6 +36,7 @@
         @include grid(4, 1fr, 30px);
 
         .nft-container {
+            @include card_hover($button-bg-color);
             background-color: $main-bg-color;
             box-shadow: $card-box-shadow;
             padding: 10px 15px 10px 10px;

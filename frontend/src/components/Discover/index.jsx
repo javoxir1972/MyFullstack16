@@ -9,7 +9,7 @@ function Discover(props) {
             <Heading title="Discover" path="Discover">
             </Heading>
             <DiscoverAmazing />
-            <ImagePhone /> 
+            <ImagePhone />  
 
         </div>
     );

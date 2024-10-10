@@ -1,4 +1,5 @@
 import "./style.scss"
+import nft1 from "../../../assets/images/Explore/nft1.jpg"
 
 function UnclockUnique() {
     return (
@@ -21,8 +22,7 @@ function UnclockUnique() {
                 </button>
             </div>
             <div className="unclock-right">
-                <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=2210&quality=70" alt=""
-                    width="510px" height="535px" />
+                <img src={nft1} alt="" width="510px" height="535px" />
             </div>
         </div>
     );

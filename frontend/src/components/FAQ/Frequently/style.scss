@@ -1,0 +1,75 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.frequently-wrapper {
+    padding: 50px 150px;
+
+    .top {
+        @include flex(column, center, space-between, 0);
+        text-align: center;
+
+        h6 { 
+            color: grey;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        h1 {
+            padding: 15px 0;
+            font-size: 59px;
+            line-height: 72px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+        }
+
+        input {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 572px;
+            height: 52px;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+            background-color: $input-bg;
+            color: $input-color;
+        }
+
+        .buttons {
+            @include flex(row, center, space-between, 15px);
+            margin-top: 10px;
+            margin-bottom: 30px;
+
+            button {
+                @include flex(row, center, space-between, 0);
+                justify-content: center;
+                width: 161px;
+                height: 47px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 26px;
+                padding: 22px;
+                border-radius: 20px;
+                background-color: $main-bg-color;
+                color: grey;
+
+                &:hover {
+                    background: $button-bg-color;
+                    color: $main-bg-color;
+                }
+            }
+        }
+
+    }
+
+    .center {
+        @include flex();
+    }
+}

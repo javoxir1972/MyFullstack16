@@ -16,7 +16,7 @@ function Nav() {
                 </div>
             </div>
             <div className="nav-right">
-                <NavLink to="/" activeclassname="active">Explore</NavLink>
+                <NavLink to="/" activeclassname="active">Explore</NavLink> 
                 <NavLink to="Trending" activeclassname="active">Trending🔥</NavLink>
                 <NavLink to="FAQ" activeclassname="active">FAQ</NavLink>
             </div>

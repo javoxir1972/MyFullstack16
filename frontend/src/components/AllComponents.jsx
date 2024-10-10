@@ -2,7 +2,9 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Navigation from './Navigation'
 import Home from "./Home"
 import Discover from './Discover'
-import AboutCompany from './About/AboutCompany'
+import About from './About'
+import Become from './Become'
+import FAQ from './FAQ'
 
 function AllComponents(props) {
     const location = useLocation()
@@ -17,8 +19,13 @@ function AllComponents(props) {
                 <Route path="discover" element={<Discover />} />
 
                 {/* http://localhost:5173/ */}
-                <Route path="About" element={<AboutCompany />} />
+                <Route path="About" element={<About />} />
 
+                {/* http://localhost:5173/ */}
+                <Route path="Become" element={<Become />} />
+
+                {/* http://localhost:5173/ */}
+                <Route path="Faq" element={<FAQ />} />
                 {/* http://localhost:5173/contact */}
                 {/* <Route path="contacts" element={<Contacts />} /> */}
             </Route>

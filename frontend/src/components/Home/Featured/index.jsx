@@ -1,14 +1,16 @@
 import "./style.scss"
 import Item from "./Item"
 import FProductJSON from "../../../db/featured_product.json"
-import Img1 from "../../../assets/images/7hokage.jpg"
-import Img2 from "../../../assets/images/dam.jpg"
-import Img3 from "../../../assets/images/narutokid.jpg"
-import Img4 from "../../../assets/images/narutoandsuske.jpg"
+
+import Img1 from "../../../assets/images/Explore/nft1.jpg"
+import Img2 from "../../../assets/images/Explore/nft2.jpg"
+import Imgava1 from "../../../assets/images/LeaderBoardAva/Antonson.png"
+import Imgava2 from "../../../assets/images/LeaderBoardAva/Michael.png"
+
 
 function FeaturedCollections() {
-    let imgs1 = [Img1, Img2, Img3, Img4];
-    let imgs2 = [Img4, Img3, Img2, Img1];
+    let imgs1 = [Img1, Img2];
+    let imgs2 = [Imgava1, Imgava2];
 
     return (
         <div className="featured">

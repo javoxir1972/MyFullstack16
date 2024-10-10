@@ -1,4 +1,6 @@
 import "./style.scss"
+import Phone from "../../../assets/images/Explore/nft1.jpg"
+
 function ImagePhone() {
     return (
         <div className="image-phone-container">
@@ -17,8 +19,7 @@ function ImagePhone() {
                     </button>
                 </div>
                 <div className="right">
-                    <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=2210&quality=70"
-                        alt="" width="400px" height="400px" />
+                    <img src={Phone} alt="" width="400px" height="400px" />
                 </div>
             </div>
         </div>

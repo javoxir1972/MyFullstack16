@@ -1,14 +1,20 @@
 import "./style.scss"
 import Item from "./item"
 import TProductJSON from "../../../db/trending_product.json"
-import Img1 from "../../../assets/images/7hokage.jpg"
-import Img2 from "../../../assets/images/dam.jpg"
-import Img3 from "../../../assets/images/narutokid.jpg"
-import Img4 from "../../../assets/images/narutoandsuske.jpg"
+
+import Img1 from "../../../assets/images/TrendingArt/nft1.png"
+import Img2 from "../../../assets/images/TrendingArt/nft2.png"
+import Img3 from "../../../assets/images/TrendingArt/nft3.jpg"
+import Img4 from "../../../assets/images/TrendingArt/nft4.jpg"
+
+import avaimg1 from "../../../assets/images/LeaderBoardAva/Peperzone.png"
+import avaimg2 from "../../../assets/images/LeaderBoardAva/Antonson.png"
+import avaimg3 from "../../../assets/images/LeaderBoardAva/Richard.png"
+import avaimg4 from "../../../assets/images/LeaderBoardAva/Michael.png"
 
 function TrendingArt() {
     let imgs1 = [Img1, Img2, Img3, Img4];
-    let imgs2 = [Img4, Img3, Img2, Img1]; 
+    let imgs2 = [avaimg1, avaimg2, avaimg3, avaimg4];
 
     return (
         <div className="trending-art">
@@ -38,7 +44,7 @@ function TrendingArt() {
                         )
                     })
                 }
-            </div> 
+            </div>
         </div>
     );
 }
