@@ -17,7 +17,10 @@ import logoipsum8 from "../../../assets/images/OurPartners/logoipsum8.png"
 import logoipsum9 from "../../../assets/images/OurPartners/logoipsum9.png"
 import logoipsum10 from "../../../assets/images/OurPartners/logoipsum10.png"
 
-import Img1 from "../../../assets/images/7hokage.jpg"
+import nft from "../../../assets/images/About/nft1.png"
+import human from "../../../assets/images/About/nft2.png"
+
+import TokyoDrift from "../../../assets/video/TokyoDrift.mp4"
 function AboutCompany() {
     // let imgs1 = [Img1, Img2, Img3, Img4];
     // let imgs2 = [Img4, Img3, Img2, Img1];
@@ -33,12 +36,12 @@ function AboutCompany() {
                     </div>
 
                     <div className="right">
-                        <img src={Img1} alt="" width="455px" height="499px" />
+                        <img src={nft} alt="" width="455px" height="499px" />
                     </div>
                 </div>
                 <div className="AboutCompany-header-bottom">
                     <div className="left">
-                        <img src="https://s3-alpha-sig.figma.com/img/cd0f/b1c0/a353d84e204f0a02dd7cff2a5a643128?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Rzl0bknTzVEmLt2bcC0UuVX8jwGHhF4WVycrZRrO51PF66iSStbKAmnWvh2Dkh3eVpyWRJ2L6T~PHobvpxVSFYGb9x4LA-lRSb8Q8QGEZjy5roG4SyKNjh3kExgi39c50fhx7U8BFKadkUydN0goM-sYaE4xI27FcV-NsLxnwQJ-~7NTUU~zr-D3c0BVEAFsAfQeHydP1AjDJuN-dxZ-Nhg~GgpKz7kjLN0tt7Jiu2rP14OX5wsMpxMmXr8yw0sI-R38YzDVmrpmBpsFgIkRu~qN72Xb~6hEpshjwn8bsL5yVMgLSyg7j7ZUSHbKhEdRNmdcSCLaeQ9sZXkgOsTXNA__" alt="" width="615px" height="549px" />
+                        <img src={human} alt="" width="615px" height="549px" />
                     </div>
                     <div className="right">
                         <h1>NFT Represent the future</h1>
@@ -72,6 +75,9 @@ function AboutCompany() {
             <div className="AboutCompany-distro-nft">
                 <div className="distro">
                     <h1>NFT Distro</h1>
+                    <video controls loop muted>
+                        <source src={TokyoDrift} />
+                    </video>
                 </div>
             </div>
 
@@ -123,9 +129,11 @@ function AboutCompany() {
                 </div>
             </div>
             <div className="AboutCompany-container-nft">
-                <h1>Interested in joining us?</h1>
-                <p>We're always looking for passionate individuals to help us achieve our goals. Apply <br /> today and let's build a better future together.</p>
-                <button>Join us</button>
+                <div>
+                    <h1>Interested in joining us?</h1>
+                    <p>We're always looking for passionate individuals to help us achieve our goals. Apply <br /> today and let's build a better future together.</p>
+                    <button>Join us</button>
+                </div>
             </div>
 
         </div>

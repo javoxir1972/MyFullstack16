@@ -9,7 +9,8 @@ import nftava2 from "../../../assets/images/LeaderBoardAva/Michael.png"
 import nftava3 from "../../../assets/images/LeaderBoardAva/Richard.png"
 import nftava4 from "../../../assets/images/LeaderBoardAva/Peperzone.png"
 
-import ava from "../../../assets/images/narutokid.jpg"
+import ava from "../../../assets/images/Naruto/narutokid.jpg"
+
 function BecomeArtist(props) {
     return (
         <div className="becomeartist">
