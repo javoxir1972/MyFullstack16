@@ -3,7 +3,6 @@
 
 .frequently-wrapper {
     padding: 50px 150px;
-
     .top {
         @include flex(column, center, space-between, 0);
         text-align: center;
@@ -59,51 +58,136 @@
                 border-radius: 20px;
                 background-color: $main-bg-color;
                 color: grey;
-
-                &:hover {
-                    background: $button-bg-color;
-                    color: $main-bg-color;
-                }
             }
         }
 
     }
 
-    .center {
-        @include flex();
+    .general {
+        @include flex(column, center, space-between, 0);
 
-        // .btn {
-        //     position: absolute;
-        //     z-index: 1;
-        //     width: 150px;
-        //     height: 150px;
-        //     border: none;
-        //     background-color: blue;
+        .container {
+            @include flex(row, center, space-between, 0);
+            width: 810px;
+            height: 62px;
+            top: 736px;
+            left: 395px;
+            padding: 18px 28px 18px 51.12px;
+            gap: 11.43px;
+            border-radius: 16px 0px 0px 0px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 26px;
+            border-radius: 16px;
+            background-color: $light;
+            color: black;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4.57px 54.85px 0px rgba(197, 197, 197, 0.25);
 
-        //     &:hover {
-        //         background-color: red;
-        //         cursor: pointer;
-        //     }
+            button {
+                background-color: $light;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
 
-        //     &:active {
-        //         background-color: yellow;
-        //         color: aqua;
-        //         border: 1px red solid;
-        //         cursor: pointer;
-        //     }
+        .text {
+            @include flex(column);
+            margin-top: 20px;
+            margin-right: 80px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            text-align: left;
 
-        //     .element {
-        //         width: 150px;
-        //         height: 150px;
-        //         background-color: green;
-        //         transform: translateY(-100%);
-        //         transition: 1s;
-        //     }
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            max-height: 0;
+            padding: 0;
+        }
 
-        //     .element-hidden {
-        //         transform: translateY(0);
-        //     }
+        .text-visible {
+            max-height: 200px;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
 
-        // }
+
+
     }
+
+    .center-art {
+        @include flex(row, center, space-between, 40px);
+        .nft-art {
+            @include card_hover($button-bg-color);
+            background-color: $main-bg-color;
+            box-shadow: $card-box-shadow;
+            color: $card-color;
+            padding: 10px 15px 20px 10px;
+            border-radius: 10px;
+
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 10px;
+            }
+
+            h4 {
+                padding: 10px 0 10px 0;
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: 700;
+                line-height: 26px;
+            }
+
+            .nft-art-bottom {
+                @include flex(row, center, space-between, 0);
+                margin-bottom: 5px;
+
+                .nft-art-bottom-left {
+                    @include flex(row, center, space-between, 0);
+
+                    p {
+                        color: $card-color;
+                        font-weight: 700;
+                        font-family: sans-serif;
+                        font-size: 15px;
+                        line-height: 23px;
+                    }
+
+                    img {
+                        width: 28px;
+                        height: 28px;
+
+                        margin-right: 5px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .nft-art-bottom-right {
+                    display: grid;
+                    text-align: center;
+                    font-family: sans-serif;
+
+
+                    h6 {
+                        font-family: sans-serif;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: grey;
+                    }
+
+                    h5 {
+                        font-size: 15px;
+                        font-family: sans-serif;
+                        line-height: 16px;
+                        color: $card-color;
+                    }
+                }
+            }
+        }
+    }
+
 }

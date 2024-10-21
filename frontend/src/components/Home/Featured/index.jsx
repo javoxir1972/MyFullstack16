@@ -43,10 +43,7 @@ function FeaturedCollections() {
                         )
                     })
                 }
-
-
             </div>
-
         </div>
     );
 }

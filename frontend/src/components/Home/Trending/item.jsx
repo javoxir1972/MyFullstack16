@@ -17,8 +17,7 @@ function Item(props) {
                     </div>
                 </div>
             </div>
-
-        </div> 
+        </div>
     );
 }
 
