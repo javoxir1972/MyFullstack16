@@ -101,31 +101,19 @@
                         border-radius: 15px;
                         background: $button-bg-color;
 
-                        position: relative;
-                        z-index: 1;
-                        cursor: pointer;
-
-                        &::before {
-                            content: "";
-                            transition: 0.2s;
-                            position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            left: 0;
-                            right: 200%;
-                            z-index: 0;
-                            background: linear-gradient(108.39deg, #6E56FF 6.99%, #B073FF 119.86%);
-                        }
-
-                        &:hover::before {
-                            z-index: -1;
-                            left: 0;
-                            right: 0;
-                            border-radius: 15px;
-                        }
+                        transition: transform 0.2s ease,
+                            box-shadow 0.3s ease,
+                            background-color 0.3s;
+                        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
                         &:hover {
-                            transform: scale(1.1);
+                            text-shadow: 3px 3px 3px #427388;
+                            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+                        }
+
+                        &:active {
+                            transform: scale(0.95);
+                            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
                         }
                     }
                 }

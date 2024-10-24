@@ -6,6 +6,8 @@ import About from './About'
 import Become from './Become'
 import FAQ from './FAQ'
 
+import FeaturedCollections from './Home/Featured'
+import FeaturedCard from './Home/FeaturedCard/index1'
 function AllComponents(props) {
     const location = useLocation()
 
@@ -28,6 +30,11 @@ function AllComponents(props) {
                 <Route path="Faq" element={<FAQ />} />
                 {/* http://localhost:5173/contact */}
                 {/* <Route path="contacts" element={<Contacts />} /> */}
+
+                <Route path="/" element={<FeaturedCollections />} />
+                <Route path="/featured-card" element={<FeaturedCard />} /> 
+
+
             </Route>
         </Routes>
     )

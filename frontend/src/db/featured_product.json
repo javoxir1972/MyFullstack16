@@ -9,7 +9,18 @@
         "leftcurrent": "current",
         "leftnumber": "4.321",
         "rightcurrent": "current",
-        "righttime": "1h 52m 14s"
+        "righttime": "1h 52m 14s",
+
+        "data": "Minted on Dec 31, 2022",
+        "collection": "collection",
+        "creator": "creator",
+        "name1": "richard",
+        "name2": "michael",
+        "descriptiontitle": "We would like to present you The Exboot 3D - Watching you~ a digital collectible that utilizes blockchain technology to prove authenticity and scarcity. A must-have for any futuristic art enthusiast.",
+        "current": "Current Bid",
+        "money": "3.421",
+        "end": "End in",
+        "hours": "1h 12m 14s"
     },
     {
         "id": 2,
@@ -21,6 +32,17 @@
         "leftcurrent": "current",
         "leftnumber": "2.321",
         "rightcurrent": "current",
-        "righttime": "4h 22m 44s"
+        "righttime": "4h 22m 44s",
+        
+        "data": "Minted on May 31, 2024",
+        "collection": "collection",
+        "creator": "creator",
+        "name1": "antonson",
+        "name2": "peperzone",
+        "descriptiontitle": "We would like to present you The Exboot 3D - Watching you~ a digital collectible that utilizes blockchain technology to prove authenticity and scarcity. A must-have for any futuristic art enthusiast.",
+        "current": "Current Bid",
+        "money": "8.421",
+        "end": "End in",
+        "hours": "2h 11m 09s"
     }
 ]

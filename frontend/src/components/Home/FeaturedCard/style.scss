@@ -1,0 +1,182 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.FeaturedCard {
+    padding: 50px 150px;
+
+
+    .featured-nft-container {
+        @include flex(row, flex-start, space-between, 50px);
+        padding: 15px 35px 15px 15px;
+        color: $card-color;
+        background-color: $main-bg-color;
+
+        .nft-left-container {
+            img {
+                border-radius: 10px;
+            }
+        }
+
+        .nft-right-container {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+
+            .nft-right-titles {
+                @include flex(column, start, flex-start, 15px);
+                color: $card-color;
+
+                h1 {
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 40px;
+                    letter-spacing: -0.003em;
+                }
+
+                h6 {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 23px;
+                    color: $main-grey-color;
+                    margin-bottom: 20px;
+
+                }
+
+                .nft-left-ava {
+                    @include flex(start, center, space-between, 40px);
+                    margin-bottom: 30px;
+
+                    h6 {
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 23px;
+                        text-align: left;
+                        color: $main-grey-color;
+                        margin-bottom: 5px;
+                    }
+
+                    .left {
+                        width: 192px;
+                        height: 62px;
+
+                        .richard {
+                            @include flex(row, center, start, 15px);
+                            padding: 10px 15px 10px 20px;
+                            border-radius: 15px;
+                            box-shadow: 0px 4.57px 54.85px 0px rgba(197, 197, 197, 0.25);
+                            background: rgba(255, 255, 255, 1);
+
+
+                            img {
+                                border-radius: 50%;
+                            }
+
+                            span {
+                                color: $card-color;
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 26px;
+                                text-align: left;
+                            }
+
+                        }
+                    }
+
+                    .right {
+                        width: 192px;
+                        height: 62px;
+
+                        .michael {
+                            @include flex(row, center, start, 15px);
+                            padding: 10px 15px 10px 20px;
+                            border-radius: 15px;
+                            box-shadow: 0px 4.57px 54.85px 0px rgba(197, 197, 197, 0.25);
+                            background: rgba(255, 255, 255, 1);
+
+
+                            img {
+                                border-radius: 50%;
+                            }
+
+                            span {
+                                color: $card-color;
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 26px;
+                                text-align: left;
+                            }
+                        }
+
+                    }
+                }
+
+                .description {
+                    h6 {
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 23px;
+                        text-align: left;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        text-align: left;
+                    }
+                }
+
+                .nft-price {
+                    @include flex(row, flex-start, space-between, 50px);
+                    margin-bottom: 15px;
+
+                    h6 {
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 23px;
+                        text-align: left;
+                        margin-bottom: 10px;
+                    }
+
+                    h5 {
+                        font-size: 26px;
+                        font-weight: 500;
+                        line-height: 34px;
+                        text-align: left;
+                    }
+                }
+
+                .btn {
+                    width: 437px;
+                    height: 62px;
+                    padding: 15px;
+                    border-radius: 15px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 23px;
+                    color: snow;
+                    background: $button-bg-color;
+                    border: none;
+                    cursor: pointer;
+                    font-weight: bold;
+
+                    transition: transform 0.2s ease,
+                        box-shadow 0.3s ease,
+                        background-color 0.3s;
+                    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+                    &:hover {
+                        text-shadow: 3px 3px 3px #427388;
+                        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+                    }
+
+                    &:active {
+                        transform: scale(0.95);
+                        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+}

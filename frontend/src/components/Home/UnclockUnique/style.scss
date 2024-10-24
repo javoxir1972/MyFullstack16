@@ -1,9 +1,19 @@
 @import "../../../assets/styles/resets";
 @import "../../../assets/styles/setting";
 
+.unclock-wrapper {
+    position: relative; // Ensures the modal container is positioned correctly
+}
+
 .unclock {
     padding: 80px 150px;
     @include flex(row, start, space-between, 50px);
+    display: flex;
+    transition: filter 0.3s ease; // Smooth transition for blur effect
+
+    &.blurred {
+        filter: blur(5px); // Apply blur effect when this class is active
+    }
 
     .unclock-left {
         height: 520px;
@@ -16,7 +26,7 @@
                 display: inline-block;
                 color: black;
                 font-size: 65px;
-                font-family: Clash Display Variable;
+                font-family: "Clash Display Variable";
                 margin-bottom: 7px;
                 font-weight: 600;
             }
@@ -37,7 +47,6 @@
             font-size: 14px;
         }
 
-
         button {
             font-size: 18px;
             margin-top: 30px;
@@ -45,12 +54,21 @@
             color: $main-bg-color;
             padding: 15px 50px;
             background: $button-bg-color;
+            cursor: pointer;
+
+            transition: transform 0.2s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
             &:hover {
-                box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
-                outline-color: rgba(255, 255, 255, 0);
-                outline-offset: 15px;
-                text-shadow: 2px 2px 2px #427388;
+                text-shadow: 3px 3px 3px #427388;
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            &:active {
+                transform: scale(0.95);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             }
         }
     }
@@ -60,4 +78,85 @@
             border-radius: 20px;
         }
     }
+}
+
+.modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10; // Ensures it stays above the blurred content
+}
+
+.modal {
+    @include flex(column, center, space-between, 10px);
+    background-color: white;
+    padding: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: -12%;
+        right: 0%;
+        font-size: 50px;
+        font-weight: 200;
+        color: snow;
+        cursor: pointer;
+    }
+
+    h6 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 38px;
+        text-align: center;
+
+    }
+
+    p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    button {
+        border-radius: 20px;
+        margin-bottom: 10px;
+        padding: 15px 90px;
+        border-radius: 20px;
+        color: $light;
+
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 26px;
+        text-align: left;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            text-shadow: 3px 3px 3px #427388;
+        }
+    }
+
+    .pink {
+        background: linear-gradient(108.39deg, #FF56BB 6.99%, #FF8F77 119.86%);
+    }
+
+    .blue {
+        background: linear-gradient(108.39deg, #6E56FF 6.99%, #B073FF 119.86%);
+    }
+
+    .green {
+        background: linear-gradient(108.39deg, #56C2FF 6.99%, #48FE9C 119.86%);
+    }
+
 }
