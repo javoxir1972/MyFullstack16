@@ -6,6 +6,7 @@ import FProductJSON from "../../../db/featured_product.json";
 
 import Img1 from "../../../assets/images/Explore/nft1.jpg";
 import Img2 from "../../../assets/images/Explore/nft2.jpg";
+
 import Imgava1 from "../../../assets/images/LeaderBoardAva/Antonson.png";
 import Imgava2 from "../../../assets/images/LeaderBoardAva/Michael.png";
 

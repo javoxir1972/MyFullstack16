@@ -1,25 +1,29 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom"; // Импортируем useLocation и useNavigate
+import { useLocation, useNavigate } from "react-router-dom";
 import "./style.scss";
-import nft1 from "../../../assets/images/TrendingArt/nft1.png"
+import Img1 from "../../../assets/images/Explore/nft1.jpg";
+import Img2 from "../../../assets/images/Explore/nft2.jpg";
 import richard from "../../../assets/images/LeaderBoardAva/Richard.png";
 import michael from "../../../assets/images/LeaderBoardAva/Michael.png";
 
 function FeaturedCard() {
-    const location = useLocation(); // Получаем location
-    const { product } = location.state; // Извлекаем переданный продукт
-    const navigate = useNavigate(); // Инициализируем navigate
+    const location = useLocation();
+    const { product } = location.state;
+    const navigate = useNavigate();
+
+    const imgs1 = [Img1, Img2]; // Массив изображений
+    const selectedImage = imgs1[product.id % imgs1.length]; // Выбираем изображение по ID продукта
 
     const handleClose = () => {
-        navigate('/'); // Возврат на главную страницу
+        navigate("/"); // Возврат на главную страницу
     };
 
     return (
         <div className="FeaturedCard">
-            <button className="close-button" onClick={handleClose}>✖</button>
             <div className="featured-nft-container">
+            <button className="close-button" onClick={handleClose}>✖</button>
                 <div className="nft-left-container">
-                    <img src={nft1} alt="" width="518" height="580" />
+                    <img src={selectedImage} alt="" width="518" height="580" />
                 </div>
                 <div className="nft-right-container">
                     <div className="nft-right-titles">
@@ -55,7 +59,7 @@ function FeaturedCard() {
                                 <h5>{product.hours}</h5>
                             </div>
                         </div>
-                        <button className='btn' onClick={() => alert('Place Bid Clicked!')}>
+                        <button className="btn" onClick={() => alert("Place Bid Clicked!")}>
                             <b>🔥Place Bid</b>
                         </button>
                     </div>

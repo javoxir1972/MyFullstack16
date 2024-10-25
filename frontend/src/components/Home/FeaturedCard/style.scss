@@ -4,12 +4,18 @@
 .FeaturedCard {
     padding: 50px 150px;
 
+    .close-button {
+        top: -7%;
+        right: -0.4%;
+        position: absolute;
+    }
 
     .featured-nft-container {
         @include flex(row, flex-start, space-between, 50px);
         padding: 15px 35px 15px 15px;
         color: $card-color;
         background-color: $main-bg-color;
+        position: relative;
 
         .nft-left-container {
             img {

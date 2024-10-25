@@ -7,7 +7,8 @@ import Become from './Become'
 import FAQ from './FAQ'
 
 import FeaturedCollections from './Home/Featured'
-import FeaturedCard from './Home/FeaturedCard/index1'
+import FeaturedCard from './Home/FeaturedCard/FeaturedCard'
+
 function AllComponents(props) {
     const location = useLocation()
 
@@ -32,7 +33,7 @@ function AllComponents(props) {
                 {/* <Route path="contacts" element={<Contacts />} /> */}
 
                 <Route path="/" element={<FeaturedCollections />} />
-                <Route path="/featured-card" element={<FeaturedCard />} /> 
+                <Route path="/featured-card" element={<FeaturedCard />} />
 
 
             </Route>
