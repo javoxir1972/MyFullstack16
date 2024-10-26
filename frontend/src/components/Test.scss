@@ -1,27 +1,38 @@
-.table {
-    width: 100%;
-    text-align: center;
+// .table {
+//     width: 100%;
+//     text-align: center;
 
-    td {
-        border: 1px black solid;
-    }
+//     td {
+//         border: 1px black solid;
+//     }
 
-    .dark {
-        background-color: #333;
-        color: snow;
-    }
+//     .dark {
+//         background-color: #333;
+//         color: snow;
+//     }
 
-    .table-container {
-        text-align: center;
-        margin-top: 20px;
-    }
+//     .table-container {
+//         text-align: center;
+//         margin-top: 20px;
+//     }
 
-    .table-header {
-        background-color: #333;
-        color: snow;
+//     .table-header {
+//         background-color: #333;
+//         color: snow;
 
-        td {
-            padding: 10px;
-        }
-    }
-}
+//         td {
+//             padding: 10px;
+//         }
+//     }
+// }
+
+
+// СДЕЛАЙ НОРМАЛЬНУЮ MEDIA ПОД ТАКИМИ РАЗМЕРАМИ БЛЯТ $small: 600px;
+// $medium: 950px;
+// $large: 1200px;
+// $x-large: 1350px;
+
+// @media (max-width: $small) {}
+// @media (max-width: $medium) {}
+// @media (max-width: $large) {}
+// @media (max-width: $x-large) {}

@@ -35,7 +35,6 @@
                 font-size: 18px;
                 font-weight: 700;
                 line-height: 26px;
-
             }
 
             label {
@@ -129,7 +128,6 @@
                     transform: scale(0.95);
                     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
                 }
-
             }
         }
 
@@ -187,7 +185,6 @@
                             font-size: 25.6px;
                             font-weight: 700;
                             line-height: 39.26px;
-
                         }
                     }
 
@@ -196,11 +193,95 @@
                             font-size: 25.6px;
                             font-weight: 700;
                             line-height: 39.26px;
-
                         }
                     }
                 }
+            }
+        }
+    }
+}
 
+// Media Queries
+@media (max-width: $small) {
+    .create-new-nft {
+        padding: 50px 20px; // Reduce padding for small screens
+
+        h1 {
+            font-size: 32px; // Smaller heading
+            margin-bottom: 40px; // Adjust margin
+        }
+
+        .container {
+            @include flex(column, center, start, 0); // Stack items vertically
+
+            .form-container {
+                width: 100%; // Full width for the form container
+
+                input,
+                textarea {
+                    width: 100%; // Full width for inputs and textarea
+                    height: auto; // Adjust height
+                    margin-bottom: 20px; // Adjust margin
+                }
+
+                #image {
+                    width: 100%; // Make image responsive
+                    height: auto; // Adjust height
+                }
+
+                .create {
+                    width: 100%; // Full width for the create button
+                }
+            }
+
+            .card-preview {
+                width: 100%; // Make card preview full width
+                margin-top: 20px; // Add margin
+            }
+        }
+    }
+}
+
+@media (max-width: $medium) {
+    .create-new-nft {
+        padding: 80px 40px; // Slightly reduce padding
+
+        h1 {
+            font-size: 40px; // Adjust heading size for medium screens
+            margin-bottom: 60px; // Adjust margin
+        }
+
+        .container {
+            .form-container {
+
+                input,
+                textarea {
+                    width: 100%; // Ensure inputs and textareas are full width
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $large) {
+    .create-new-nft {
+        padding: 90px 60px; // Maintain a comfortable padding for large screens
+
+        h1 {
+            font-size: 54px; // Adjust heading size
+        }
+    }
+}
+
+@media (max-width: $x-large) {
+    .create-new-nft {
+        .container {
+            .form-container {
+
+                input,
+                textarea {
+                    width: 100%; // Maintain full width
+                }
             }
         }
     }
