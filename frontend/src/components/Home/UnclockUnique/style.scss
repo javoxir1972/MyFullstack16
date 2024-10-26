@@ -76,6 +76,8 @@
     .unclock-right {
         img {
             border-radius: 20px;
+            max-width: 100%; // Ensure image is responsive
+            height: auto; // Maintain aspect ratio
         }
     }
 }
@@ -117,7 +119,6 @@
         font-weight: 700;
         line-height: 38px;
         text-align: center;
-
     }
 
     p {
@@ -132,15 +133,14 @@
         border-radius: 20px;
         margin-bottom: 10px;
         padding: 15px 90px;
-        border-radius: 20px;
+        border: none;
+        cursor: pointer;
         color: $light;
 
         font-size: 18px;
         font-weight: 700;
         line-height: 26px;
         text-align: left;
-        border: none;
-        cursor: pointer;
 
         &:hover {
             text-shadow: 3px 3px 3px #427388;
@@ -158,5 +158,100 @@
     .green {
         background: linear-gradient(108.39deg, #56C2FF 6.99%, #48FE9C 119.86%);
     }
+}
 
+// Media Queries
+@media (max-width: $small) {
+    .unclock {
+        padding: 40px 20px; // Reduce padding for small screens
+        flex-direction: column; // Stack the content vertically
+
+        .unclock-left {
+            height: auto; // Allow height to adjust automatically
+
+            h1 {
+                span {
+                    font-size: 40px; // Reduce size of the header
+                }
+            }
+
+            h5 {
+                font-size: 20px; // Reduce size of the subheader
+            }
+
+            h6 {
+                font-size: 12px; // Reduce size of the text
+            }
+
+            button {
+                font-size: 16px; // Reduce button size
+                padding: 10px 30px; // Adjust button padding
+            }
+        }
+
+        .unclock-right {
+            img {
+                width: 100%; // Make image responsive
+            }
+        }
+    }
+
+    .modal {
+        padding: 20px; // Reduce modal padding
+
+        span {
+            font-size: 30px; // Reduce close button size
+        }
+
+        h6 {
+            font-size: 24px; // Reduce modal header size
+        }
+
+        p {
+            font-size: 12px; // Reduce modal paragraph size
+        }
+
+        button {
+            padding: 10px 60px; // Adjust button padding in modal
+            font-size: 16px; // Reduce button font size
+        }
+    }
+}
+
+@media (max-width: $medium) {
+    .unclock {
+        padding: 60px 30px; // Adjust padding for medium screens
+
+        .unclock-left {
+            h1 {
+                span {
+                    font-size: 55px; // Adjust size of the header
+                }
+            }
+
+            h5 {
+                font-size: 22px; // Adjust size of the subheader
+            }
+        }
+    }
+}
+
+@media (max-width: $large) {
+    .unclock {
+        padding: 70px 40px; // Adjust padding for large screens
+    }
+}
+
+@media (max-width: $x-large) {
+    .unclock {
+        padding: 80px 50px; // Adjust padding for extra-large screens
+
+        .unclock-left {
+            h1 {
+                span {
+                    font-size: 60px; // Adjust header size for larger screens
+                }
+            }
+        }
+    }
 }
