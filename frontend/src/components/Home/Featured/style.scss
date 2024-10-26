@@ -12,7 +12,6 @@
             text-align: center;
             margin-bottom: 50px;
         }
-
     }
 
     .featured-nft {
@@ -28,7 +27,6 @@
             border-radius: 10px;
             box-shadow: $card-box-shadow;
 
-
             .nft-left-container {
                 img {
                     border-radius: 10px;
@@ -37,7 +35,6 @@
                 h4 {
                     border: 10px blue dashed;
                 }
-
             }
 
             .nft-right-container {
@@ -102,8 +99,8 @@
                         background: $button-bg-color;
 
                         transition: transform 0.2s ease,
-                            box-shadow 0.3s ease,
-                            background-color 0.3s;
+                                    box-shadow 0.3s ease,
+                                    background-color 0.3s;
                         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
                         &:hover {
@@ -117,6 +114,72 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: $small) {
+    .featured {
+        padding: 40px 20px; // Уменьшаем отступы
+
+        .featured-header {
+            h1 {
+                font-size: 30px; // Уменьшаем размер заголовка
+            }
+        }
+
+        .featured-nft {
+            @include flex(column, center, flex-start, 20px); // Вертикальная компоновка
+
+            .featured-nft-container {
+                @include flex(column, flex-start, center, 20px); // Вертикальная компоновка для контейнера
+                width: 100%; // Полная ширина на маленьких экранах
+
+                padding: 10px; // Уменьшаем внутренние отступы
+            }
+        }
+    }
+}
+
+@media (max-width: $medium) {
+    .featured {
+        .featured-header {
+            h1 {
+                font-size: 35px; // Уменьшаем размер заголовка
+            }
+        }
+
+        .featured-nft {
+            .featured-nft-container {
+                padding: 15px 20px; // Уменьшаем отступы
+            }
+        }
+    }
+}
+
+@media (max-width: $large) {
+    .featured {
+        .featured-header {
+            h1 {
+                font-size: 38px; // Корректируем размер заголовка
+            }
+        }
+    }
+}
+
+@media (max-width: $x-large) {
+    .featured {
+        .featured-header {
+            h1 {
+                font-size: 40px; // Оставляем размер заголовка прежним
+            }
+        }
+
+        .featured-nft {
+            .featured-nft-container {
+                padding: 15px 30px; // Корректируем отступы
             }
         }
     }
