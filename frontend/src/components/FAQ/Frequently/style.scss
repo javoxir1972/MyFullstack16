@@ -3,6 +3,7 @@
 
 .frequently-wrapper {
     padding: 50px 150px;
+
     .top {
         @include flex(column, center, space-between, 0);
         text-align: center;
@@ -60,7 +61,6 @@
                 color: grey;
             }
         }
-
     }
 
     .general {
@@ -70,14 +70,8 @@
             @include flex(row, center, space-between, 0);
             width: 810px;
             height: 62px;
-            top: 736px;
-            left: 395px;
             padding: 18px 28px 18px 51.12px;
             gap: 11.43px;
-            border-radius: 16px 0px 0px 0px;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 26px;
             border-radius: 16px;
             background-color: $light;
             color: black;
@@ -112,13 +106,11 @@
             padding: 10px 0;
             margin-bottom: 10px;
         }
-
-
-
     }
 
     .center-art {
         @include flex(row, center, space-between, 40px);
+
         .nft-art {
             @include card_hover($button-bg-color);
             background-color: $main-bg-color;
@@ -134,7 +126,7 @@
             }
 
             h4 {
-                padding: 10px 0 10px 0;
+                padding: 10px 0;
                 font-size: 18px;
                 font-family: sans-serif;
                 font-weight: 700;
@@ -159,7 +151,6 @@
                     img {
                         width: 28px;
                         height: 28px;
-
                         margin-right: 5px;
                         border-radius: 50%;
                     }
@@ -170,9 +161,7 @@
                     text-align: center;
                     font-family: sans-serif;
 
-
                     h6 {
-                        font-family: sans-serif;
                         font-weight: 400;
                         font-size: 12px;
                         line-height: 16px;
@@ -181,7 +170,6 @@
 
                     h5 {
                         font-size: 15px;
-                        font-family: sans-serif;
                         line-height: 16px;
                         color: $card-color;
                     }
@@ -189,5 +177,112 @@
             }
         }
     }
+}
 
+// Media Queries
+@media (max-width: $small) {
+    .frequently-wrapper {
+        padding: 20px 30px;
+
+        .top {
+            h1 {
+                font-size: 36px;
+                line-height: 44px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+
+        .general .container {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text {
+            margin-right: 0;
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+
+    .center-art {
+        flex-direction: column;
+
+        .nft-art {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: $medium) {
+    .frequently-wrapper {
+        padding: 30px;
+
+        .top {
+            h1 {
+                font-size: 48px;
+            }
+
+            p {
+                font-size: 17px;
+            }
+
+            input {
+                width: 80%;
+            }
+        }
+
+        .general .container {
+            width: 90%;
+        }
+
+        .text {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: $large) {
+    .frequently-wrapper {
+        .top {
+            h1 {
+                font-size: 54px;
+            }
+
+            input {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media (max-width: $x-large) {
+    .frequently-wrapper {
+        .top {
+            h1 {
+                font-size: 55px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            input {
+                width: 70%;
+            }
+        }
+
+        .center-art {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
 }
