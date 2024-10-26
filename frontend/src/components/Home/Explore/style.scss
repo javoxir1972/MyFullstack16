@@ -23,6 +23,7 @@
                 border-radius: 20px;
                 border: 1px black solid;
                 outline: none;
+
                 font-size: 15px;
                 line-height: 23px;
                 font-weight: 700;
@@ -51,6 +52,7 @@
                     font-family: sans-serif;
                     margin-top: 10px;
                     margin-bottom: 10px;
+
                     font-size: 18px;
                     line-height: 26px;
                     font-weight: 700;
@@ -113,82 +115,76 @@
 // Media Queries
 @media (max-width: $small) {
     .explore-nft {
-        padding: 40px 20px; // Уменьшаем отступы
+        padding: 40px 20px; // Reduce padding for small screens
 
         .header-nft {
-            @include flex(column, center, center, 0); // Переход на вертикальную компоновку
+            @include flex(column, center, flex-start, 0);
+            margin-bottom: 30px;
 
             .left {
                 h1 {
-                    font-size: 30px; // Уменьшаем размер заголовка
-                    line-height: 36px; // Уменьшаем высоту строки
+                    font-size: 28px; // Reduce header size
                 }
             }
 
             .right {
                 button {
-                    padding: 8px 20px; // Уменьшаем отступы в кнопке
-                    font-size: 14px; // Уменьшаем размер шрифта
+                    font-size: 14px; // Reduce button font size
+                    padding: 8px 20px; // Adjust button padding
                 }
             }
         }
 
         .nft {
-            @include grid(2, 1fr, 20px); // Переход на 2 колонки
+            @include grid(2, 1fr, 20px); // Adjust grid for smaller screens
+
+            .nft-container {
+                margin-bottom: 30px; // Reduce bottom margin
+            }
         }
 
-        .nft-container {
-            padding: 10px; // Уменьшаем внутренние отступы
+        .bottom-nft {
+            flex-direction: column; // Stack buttons vertically on small screens
+
+            button {
+                margin-bottom: 10px; // Add margin between buttons
+            }
         }
     }
 }
 
 @media (max-width: $medium) {
     .explore-nft {
+        padding: 60px 40px; // Adjust padding for medium screens
+
         .header-nft {
             .left {
                 h1 {
-                    font-size: 35px; // Уменьшаем размер заголовка
+                    font-size: 36px; // Adjust header size
                 }
             }
 
             .right {
                 button {
-                    padding: 10px 24px; // Корректируем размер кнопки
+                    font-size: 15px; // Adjust button font size
                 }
             }
         }
 
         .nft {
-            @include grid(3, 1fr, 20px); // Переход на 3 колонки
+            @include grid(3, 1fr, 25px); // Adjust grid for medium screens
         }
     }
 }
 
 @media (max-width: $large) {
     .explore-nft {
-        .header-nft {
-            .left {
-                h1 {
-                    font-size: 38px; // Корректируем размер заголовка
-                }
-            }
-        }
-
-        .nft {
-            @include grid(4, 1fr, 20px); // Оставляем 4 колонки
-        }
+        padding: 70px 50px; // Adjust padding for large screens
     }
 }
 
 @media (max-width: $x-large) {
     .explore-nft {
-        .header-nft {
-            .right {
-                button {
-                    font-size: 16px; // Увеличиваем размер шрифта для кнопки
-                }
-            }
-        }
+        padding: 80px 60px; // Adjust padding for extra-large screens
     }
 }
