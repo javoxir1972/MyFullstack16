@@ -26,38 +26,121 @@
 
         .nft {
             position: relative;
-            @include flex(column, center, space-evenly, 0F);
+            @include flex(column, center, space-evenly, 0);
+
+            img {
+                border-radius: 50%;
+            }
+
+            h1 {
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 34px;
+                margin-top: 10px;
+            }
+
+            h4 {
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: 700;
+            }
+
+            span {
+                position: absolute;
+                padding: 3px 6px;
+                border-radius: 50%;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 23px;
+                font-family: sans-serif;
+                top: -10.18px;
+                left: 65px;
+                color: black;
+                background-color: snow;
+            }
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: $small) {
+    .leader {
+        padding: 20px 10px; // Уменьшаем отступы
+
+        .leader-board {
+            margin-top: 20px; // Уменьшаем отступы
+            margin-bottom: 40px; // Уменьшаем отступы
+
+            h1 {
+                font-size: 28px; // Уменьшаем размер заголовка
+            }
         }
 
-        img {
-            border-radius: 50%;
+        .nft-images {
+            @include flex(column, center, space-evenly, 0); // Вертикальная компоновка
+
+            .nft {
+                margin: 20px 0; // Увеличиваем отступы между NFT
+
+                h1 {
+                    font-size: 20px; // Уменьшаем размер заголовка NFT
+                }
+
+                h4 {
+                    font-size: 16px; // Уменьшаем размер заголовка NFT
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $medium) {
+    .leader {
+        padding: 30px 20px; // Корректируем отступы
+
+        .leader-board {
+            margin-top: 30px; // Корректируем отступы
+            margin-bottom: 60px; // Корректируем отступы
+
+            h1 {
+                font-size: 32px; // Корректируем размер заголовка
+            }
         }
 
-        h1 {
-            font-weight: 500;
-            font-size: 26px;
-            line-height: 34px;
-            margin-top: 10px;
-        }
+        .nft-images {
+            .nft {
+                h1 {
+                    font-size: 24px; // Корректируем размер заголовка NFT
+                }
 
-        h4 {
-            font-size: 18px;
-            line-height: 26px;
-            font-weight: 700;
+                h4 {
+                    font-size: 17px; // Корректируем размер заголовка NFT
+                }
+            }
         }
+    }
+}
 
-        span {
-            position: absolute;
-            padding: 3px 6px 3px 6px;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 15px;
-            line-height: 23px;
-            font-family: sans-serif;
-            top: -10.18px;
-            left: 65px;
-            color: black;
-            background-color: snow;
+@media (max-width: $large) {
+    .leader {
+        padding: 40px 30px; // Корректируем отступы
+
+        .leader-board {
+            h1 {
+                font-size: 36px; // Корректируем размер заголовка
+            }
+        }
+    }
+}
+
+@media (max-width: $x-large) {
+    .leader {
+        padding: 50px 40px; // Корректируем отступы
+
+        .leader-board {
+            h1 {
+                font-size: 38px; // Корректируем размер заголовка
+            }
         }
     }
 }
