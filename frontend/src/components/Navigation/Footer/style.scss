@@ -1,6 +1,12 @@
 @import "../../../assets/styles/resets";
 @import "../../../assets/styles/setting";
 
+$small: 600px;
+$medium: 950px;
+$large: 1200px;
+$x-large: 1350px;
+$xx-large: 1525px;
+
 .bottom {
     padding: 50px 150px;
 
@@ -47,7 +53,6 @@
                         border-radius: 50%;
                         background-color: red;
                     }
-
                 }
             }
         }
@@ -91,12 +96,9 @@
                     &:hover {
                         color: red;
                     }
-
                 }
             }
-
         }
-
     }
 
     .icons {
@@ -134,6 +136,115 @@
                 background-color: $icon-bg;
             }
         }
+    }
+}
 
+// ======================= Media Queries ==================
+
+// For small devices (600px and below)
+@media (max-width: $small) {
+    .bottom {
+        padding: 20px 20px; // Reduce padding for small screens
+
+        .bottom-over {
+            @include flex(column, center, flex-start, 0); // Stack elements
+
+            .left {
+                text-align: center; // Center align text
+
+                h1 {
+                    font-size: 30px; // Smaller heading size
+                }
+
+                h6 {
+                    font-size: 14px; // Smaller subheading size
+                }
+            }
+
+            .right {
+                margin-top: 20px; // Space above right section
+                @include flex(column, center, space-between, 0); // Stack vertically
+
+                div {
+                    input {
+                        width: 90%; // Full width input
+                    }
+                }
+            }
+        }
+
+        .icons {
+            @include flex(column, center, space-between, 20px); // Stack icons vertically
+            padding-top: 20px; // Adjust padding
+        }
+    }
+}
+
+// For medium devices (950px and below)
+@media (min-width: $small) and (max-width: $medium) {
+    .bottom {
+        padding: 30px 50px; // Adjust padding for medium screens
+
+        .bottom-over {
+            .left {
+                h1 {
+                    font-size: 36px; // Adjust heading size
+                }
+            }
+
+            .right {
+                div {
+                    input {
+                        width: 250px; // Responsive input width
+                    }
+                }
+            }
+        }
+    }
+}
+
+// For large devices (1200px and below)
+@media (min-width: $medium) and (max-width: $large) {
+    .bottom {
+        padding: 40px 80px; // Increase padding slightly
+
+        .bottom-over {
+            .left {
+                h1 {
+                    font-size: 38px; // Adjust heading size
+                }
+            }
+
+            .right {
+                div {
+                    input {
+                        width: 270px; // Wider input
+                    }
+                }
+            }
+        }
+    }
+}
+
+// For extra large devices (1350px and above)
+@media (min-width: $large) {
+    .bottom {
+        padding: 50px 150px; // Default padding
+
+        .bottom-over {
+            .left {
+                h1 {
+                    font-size: 42px; // Default heading size
+                }
+            }
+
+            .right {
+                div {
+                    input {
+                        width: 306px; // Default input width
+                    }
+                }
+            }
+        }
     }
 }
