@@ -5,11 +5,10 @@
     padding: 50px 150px;
 
     .image-phone {
-        background-color: blue;
+        background-color: $mobilenft-color;
         @include flex(row, center, space-evenly, 0);
         border-radius: 30px;
         color: snow;
-        background-color: $mobilenft-color;
 
         .left {
             h1 {
@@ -38,6 +37,78 @@
                 border-radius: 50px;
             }
         }
+    }
+}
 
+// Media Queries
+@media (max-width: $small) {
+    .image-phone-container {
+        padding: 20px 10px; // Уменьшаем отступы
+
+        .image-phone {
+            @include flex(column, center, flex-start, 20px); // Вертикальная компоновка
+
+            .left {
+                h1 {
+                    font-size: 40px; // Уменьшаем размер заголовка
+                    text-align: center; // Центрируем заголовок
+                }
+
+                button {
+                    font-size: 14px; // Уменьшаем размер кнопки
+                    padding: 10px 25px; // Уменьшаем отступы кнопки
+                }
+            }
+
+            .right {
+                img {
+                    width: 100%; // Увеличиваем ширину изображения
+                    max-width: 300px; // Максимальная ширина изображения
+                    height: auto; // Автоматическая высота
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $medium) {
+    .image-phone-container {
+        padding: 30px 20px; // Корректируем отступы
+
+        .image-phone {
+            .left {
+                h1 {
+                    font-size: 60px; // Корректируем размер заголовка
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $large) {
+    .image-phone-container {
+        padding: 40px 40px; // Корректируем отступы
+
+        .image-phone {
+            .left {
+                h1 {
+                    font-size: 65px; // Корректируем размер заголовка
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $x-large) {
+    .image-phone-container {
+        padding: 50px 50px; // Корректируем отступы
+
+        .image-phone {
+            .left {
+                h1 {
+                    font-size: 70px; // Корректируем размер заголовка
+                }
+            }
+        }
     }
 }
