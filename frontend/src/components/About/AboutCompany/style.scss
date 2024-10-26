@@ -1,8 +1,13 @@
 @import "../../../assets/styles/resets";
 @import "../../../assets/styles/setting";
 
-.AboutCompany-nft {
+$small: 600px;
+$medium: 950px;
+$large: 1200px;
+$x-large: 1350px;
+$xx-large: 1525px;
 
+.AboutCompany-nft {
     .AboutCompany-header-nft {
         @include flex(column, center, space-between, 50px);
         padding: 80px 200px;
@@ -146,7 +151,6 @@
     .AboutCompany-our-team-nft {
         padding: 80px 200px;
 
-
         h1 {
             text-align: center;
             padding-bottom: 80px;
@@ -157,7 +161,6 @@
 
         .team {
             @include flex(row, center, space-between, 0);
-
 
             div {
                 @include flex(column, center, space-between, 0);
@@ -234,5 +237,127 @@
                 }
             }
         }
+    }
+}
+
+// ======================= Media Queries for Each Div ==================
+
+// For small devices (600px and below)
+@media (max-width: $small) {
+    .AboutCompany-header-nft {
+        padding: 40px 20px; // Reduce padding for small screens
+    }
+
+    .AboutCompany-icons-nft {
+        padding: 40px 20px; // Reduce padding
+    }
+
+    .AboutCompany-distro-nft {
+        padding: 20px 20px; // Reduce padding
+    }
+
+    .AboutCompany-our-partness-nft,
+    .AboutCompany-our-team-nft {
+        padding: 40px 20px; // Reduce padding
+    }
+
+    .AboutCompany-container-nft {
+        padding: 20px; // Reduce padding
+    }
+}
+
+// For medium devices (601px to 950px)
+@media (min-width: $small) and (max-width: $medium) {
+    .AboutCompany-header-nft {
+        padding: 60px 20px; // Adjust padding for medium screens
+    }
+
+    .AboutCompany-icons-nft {
+        padding: 60px 20px; // Adjust padding
+    }
+
+    .AboutCompany-distro-nft {
+        padding: 40px 20px; // Adjust padding
+    }
+
+    .AboutCompany-our-partness-nft,
+    .AboutCompany-our-team-nft {
+        padding: 60px 20px; // Adjust padding
+    }
+
+    .AboutCompany-container-nft {
+        padding: 30px; // Adjust padding
+    }
+}
+
+// For large devices (951px to 1200px)
+@media (min-width: $medium) and (max-width: $large) {
+    .AboutCompany-header-nft {
+        padding: 80px 100px; // Increase padding slightly
+    }
+
+    .AboutCompany-icons-nft {
+        padding: 90px 50px; // Adjust padding
+    }
+
+    .AboutCompany-distro-nft {
+        padding: 50px 100px; // Adjust padding
+    }
+
+    .AboutCompany-our-partness-nft,
+    .AboutCompany-our-team-nft {
+        padding: 80px 100px; // Adjust padding
+    }
+
+    .AboutCompany-container-nft {
+        padding: 50px 100px; // Adjust padding
+    }
+}
+
+// For extra large devices (1201px to 1350px)
+@media (min-width: $large) and (max-width: $x-large) {
+    .AboutCompany-header-nft {
+        padding: 80px 150px; // Adjust padding
+    }
+
+    .AboutCompany-icons-nft {
+        padding: 90px 100px; // Adjust padding
+    }
+
+    .AboutCompany-distro-nft {
+        padding: 50px 150px; // Adjust padding
+    }
+
+    .AboutCompany-our-partness-nft,
+    .AboutCompany-our-team-nft {
+        padding: 80px 150px; // Adjust padding
+    }
+
+    .AboutCompany-container-nft {
+        padding: 50px 150px; // Adjust padding
+    }
+}
+
+// For extra extra large devices (1351px and above)
+@media (min-width: $x-large) {
+    .AboutCompany-header-nft {
+        padding: 80px 200px; // Default padding
+    }
+
+    .AboutCompany-icons-nft {
+        padding: 90px 250px; // Default padding
+    }
+
+    .AboutCompany-distro-nft {
+        padding: 50px 200px; // Default padding
+    }
+
+    .AboutCompany-our-partness-nft,
+    .AboutCompany-our-team-nft {
+        padding: 80px 200px; // Default padding
+    }
+
+    .AboutCompany-container-nft {
+        padding: 50px 200px; // Default padding
     }
 }

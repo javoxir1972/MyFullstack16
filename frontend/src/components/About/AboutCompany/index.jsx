@@ -80,7 +80,6 @@ function AboutCompany() {
                     </video>
                 </div>
             </div>
-
             <div className="AboutCompany-our-partness-nft">
                 <h1>Our Partness</h1>
                 <div className="logos-top">
