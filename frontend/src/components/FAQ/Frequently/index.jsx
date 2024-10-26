@@ -1,8 +1,7 @@
 import "./style.scss";
 import { GoArrowRight, GoArrowDown } from "react-icons/go";
 import React, { useState } from "react";
-
-
+import { useNavigate } from "react-router-dom";
 import Img1 from "../../../assets/images/TrendingArt/nft1.png"
 import Img2 from "../../../assets/images/TrendingArt/nft2.png"
 import Img3 from "../../../assets/images/TrendingArt/nft3.jpg"
@@ -17,6 +16,7 @@ import TProductJSON from "../../../db/trending_product.json"
 function Frequently() {
     const [visibleStates, setVisibleStates] = useState([false, false, false, false, false, false, false]); // Массив для видимости
     const [activeSection, setActiveSection] = useState('general'); // Хранит активный раздел
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const toggleVisibility = (index) => {
         setVisibleStates((prev) =>
@@ -30,6 +30,13 @@ function Frequently() {
     };
     let imgs1 = [Img1, Img2, Img3, Img4];
     let imgs2 = [avaimg1, avaimg2, avaimg3, avaimg4];
+
+
+
+    const handleNavigateToTrending = () => {
+        navigate('/'); // Navigate to TrendingArt page
+    };
+
 
     return (
         <div className="frequently-wrapper">
@@ -139,32 +146,24 @@ function Frequently() {
                 </div>
             )}
 
-            {/* NFT Section */}
-            <div className="center-art">
-                {activeSection === 'nft' && (
-                    <div className="nft">
-                        <div className="center-art">
-                            {
-                                TProductJSON.map((product, index) => {
-                                    return (
-                                        <div key={index}>
-                                            <Item
-                                                img1={imgs1[product.id % imgs1.length]}
-                                                hedtitle={product.hedtitle}
-                                                img2={imgs2[product.id % imgs2.length]}
-                                                avatitle={product.avatitle}
-                                                current={product.current}
-                                                number={product.number}
-                                            />
-                                        </div>
-                                    )
-                                })
-                            }
-                        </div>
+            {activeSection === 'nft' && (
+                <div className="nft">
+                    <div className="center-art" onClick={handleNavigateToTrending}>
+                        {TProductJSON.map((product, index) => (
+                            <div key={index}>
+                                <Item
+                                    img1={imgs1[product.id % imgs1.length]}
+                                    hedtitle={product.hedtitle}
+                                    img2={imgs2[product.id % imgs2.length]}
+                                    avatitle={product.avatitle}
+                                    current={product.current}
+                                    number={product.number}
+                                />
+                            </div>
+                        ))}
                     </div>
-
-                )}
-            </div>
+                </div>
+            )}
 
             {/* Payment Section */}
             {activeSection === 'payment' && (
@@ -213,3 +212,8 @@ function Frequently() {
 }
 
 export default Frequently;
+
+
+
+
+

@@ -1,0 +1,207 @@
+@import "../../../assets/styles/resets";
+@import "../../../assets/styles/setting";
+
+.create-new-nft {
+    padding: 100px 150px;
+
+    h1 {
+        text-align: center;
+        font-size: 58.45px;
+        font-weight: 500;
+        line-height: 71.7px;
+        letter-spacing: -0.003em;
+        margin-bottom: 80px;
+    }
+
+    .container {
+        @include flex(row, start, space-between, 0);
+
+        .form-container {
+            @include flex(column, start, space-between, 0);
+
+            form {
+                div {
+                    @include flex(column, start, space-between, 0);
+                }
+            }
+
+            input,
+            textarea {
+                background: rgba(243, 243, 243, 1);
+            }
+
+            h2 {
+                margin-bottom: 5px;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 26px;
+
+            }
+
+            label {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 26px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 23px;
+                margin-bottom: 15px;
+                color: grey;
+            }
+
+            #image {
+                width: 537px;
+                height: 204px;
+                padding: 20px;
+                border-radius: 20px;
+                margin-bottom: 30px;
+            }
+
+            #nftname {
+                @include flex(column, start, start, 0);
+
+                input {
+                    width: 537px;
+                    height: 49px;
+                    padding: 20px;
+                    border-radius: 10px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            #description {
+                textarea {
+                    width: 537px;
+                    height: 130px;
+                    padding: 20px;
+                    border-radius: 10px;
+                    border: none;
+                    margin-bottom: 30px;
+                }
+            }
+
+            #collection {
+                border-radius: 10px;
+                margin-bottom: 10px;
+
+                button {
+                    @include flex(row, center, start, 20px);
+                    width: 537px;
+                    height: 70px;
+                    padding: 20px;
+                    border-radius: 10px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 26px;
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .create {
+                width: 538px;
+                height: 83px;
+                border-radius: 15px;
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 34px;
+                margin-top: 20px;
+                color: snow;
+                background: $button-bg-color;
+
+                transition: transform 0.2s ease,
+                    box-shadow 0.3s ease,
+                    background-color 0.3s;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+                &:hover {
+                    text-shadow: 3px 3px 3px #427388;
+                    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                }
+
+            }
+        }
+
+        .card-preview {
+            @include card_hover($color: #FFFFFF);
+            padding: 15px;
+            @include flex(column, center, space-between, 0);
+            border-radius: 15px;
+            box-shadow: $card-box-shadow;
+
+            h5 {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 26px;
+                margin-bottom: 10px;
+            }
+
+            .img1 {
+                border-radius: 15px;
+                margin-bottom: 50px;
+            }
+
+            .card-art-bottom {
+                @include flex(column, center, space-between, 20px);
+
+                .card-art-bottom-left {
+                    @include flex(row, center, space-between, 156px);
+
+                    h2 {
+                        font-size: 30.72px;
+                        font-weight: 700;
+                        line-height: 44.38px;
+                    }
+
+                    h4 {
+                        font-size: 20.48px;
+                        font-weight: 400;
+                        line-height: 27.31px;
+                        color: grey;
+                    }
+                }
+
+                .card-art-bottom-right {
+                    @include flex(row, center, space-between, 120px);
+                    margin-bottom: 30px;
+
+                    .left {
+                        @include flex(row, center, space-between, 20px);
+
+                        img {
+                            border-radius: 50%;
+                        }
+
+                        h6 {
+                            font-size: 25.6px;
+                            font-weight: 700;
+                            line-height: 39.26px;
+
+                        }
+                    }
+
+                    .right {
+                        h5 {
+                            font-size: 25.6px;
+                            font-weight: 700;
+                            line-height: 39.26px;
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

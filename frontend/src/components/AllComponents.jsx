@@ -5,9 +5,12 @@ import Discover from './Discover'
 import About from './About'
 import Become from './Become'
 import FAQ from './FAQ'
-
 import FeaturedCollections from './Home/Featured'
 import FeaturedCard from './Home/FeaturedCard/FeaturedCard'
+import Explore from './Home/Explore'
+import CreateNewNFT from './Home/CreatedNFT/Createnewnft'
+import TrendingArt from './Home/Trending'
+import Frequently from './FAQ/Frequently'
 
 function AllComponents(props) {
     const location = useLocation()
@@ -19,7 +22,7 @@ function AllComponents(props) {
                 <Route index element={<Home />} />
 
                 {/* http://localhost:5173/ */}
-                <Route path="discover" element={<Discover />} />
+                <Route path="Discover" element={<Discover />} />
 
                 {/* http://localhost:5173/ */}
                 <Route path="About" element={<About />} />
@@ -29,12 +32,16 @@ function AllComponents(props) {
 
                 {/* http://localhost:5173/ */}
                 <Route path="Faq" element={<FAQ />} />
-                {/* http://localhost:5173/contact */}
-                {/* <Route path="contacts" element={<Contacts />} /> */}
 
                 <Route path="/" element={<FeaturedCollections />} />
                 <Route path="/featured-card" element={<FeaturedCard />} />
 
+                <Route path="/" element={<Explore />} />
+                <Route path="/create-new-nft" element={<CreateNewNFT />} />
+
+
+                <Route path="/" element={<TrendingArt />} />
+                <Route path="/faq" element={<Frequently />} />
 
             </Route>
         </Routes>

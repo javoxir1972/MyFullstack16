@@ -174,6 +174,22 @@
             line-height: 26px;
             background: $button-bg-color;
             color: $main-bg-color;
+            cursor: pointer;
+            z-index: 1;
+            transition: transform 0.2s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                text-shadow: 3px 3px 3px #427388;
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            &:active {
+                transform: scale(0.95);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
         }
 
         .right {
@@ -319,6 +335,7 @@
 
     .become-center {
         padding-bottom: 80px;
+
         h1 {
             margin-top: 15px;
             margin-bottom: 15px;
@@ -348,6 +365,22 @@
             border-radius: 20px;
             color: snow;
             background-color: #6E56FF;
+
+            z-index: 1;
+            transition: transform 0.2s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                text-shadow: 3px 3px 3px #427388;
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            &:active {
+                transform: scale(0.95);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
 
         }
 
