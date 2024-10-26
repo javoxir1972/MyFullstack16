@@ -19,7 +19,7 @@ import Img12 from "../../../assets/images/Explore/nft12.jpg";
 function DiscoverAmazing() {
     const [activeTab, setActiveTab] = useState("nft");
 
-    const imgs1 = [Img1, Img2, Img3, Img4, Img6, Img7, Img8, Img9, Img10, Img11, Img12];
+    const imgs1 = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12];
     const imgs2 = [Img4, Img3, Img2, Img1];
 
     const renderNFTs = () => (
