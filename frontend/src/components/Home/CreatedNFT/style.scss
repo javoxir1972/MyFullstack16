@@ -6,37 +6,33 @@
 
     h1 {
         text-align: center;
-        font-size: 58.45px;
+        font-size: 58px;
         font-weight: 500;
-        line-height: 71.7px;
+        line-height: 72px;
         letter-spacing: -0.003em;
         margin-bottom: 80px;
     }
 
     .container {
-        @include flex(row, start, space-between, 0);
+        @include flex(row, flex-start, space-between, 0);
 
         .form-container {
-            @include flex(column, start, space-between, 0);
+            @include flex(column, flex-start, space-between, 0);
 
             form {
                 div {
-                    @include flex(column, start, space-between, 0);
+                    @include flex(column, flex-start, space-between, 0);
                 }
             }
 
             input,
             textarea {
-                background: rgba(243, 243, 243, 1);
+                background-color: rgba(243, 243, 243, 1);
+                border: none;
+                padding: 15px;
             }
 
-            h2 {
-                margin-bottom: 5px;
-                font-size: 18px;
-                font-weight: 700;
-                line-height: 26px;
-            }
-
+            h2,
             label {
                 font-size: 18px;
                 font-weight: 700;
@@ -60,46 +56,31 @@
                 margin-bottom: 30px;
             }
 
-            #nftname {
-                @include flex(column, start, start, 0);
-
-                input {
-                    width: 537px;
-                    height: 49px;
-                    padding: 20px;
-                    border-radius: 10px;
-                    margin-bottom: 30px;
-                }
-            }
-
-            #description {
-                textarea {
-                    width: 537px;
-                    height: 130px;
-                    padding: 20px;
-                    border-radius: 10px;
-                    border: none;
-                    margin-bottom: 30px;
-                }
-            }
-
-            #collection {
+            #nftname input {
+                width: 537px;
+                height: 49px;
                 border-radius: 10px;
-                margin-bottom: 10px;
+                margin-bottom: 30px;
+            }
 
-                button {
-                    @include flex(row, center, start, 20px);
-                    width: 537px;
-                    height: 70px;
-                    padding: 20px;
-                    border-radius: 10px;
-                    font-size: 18px;
-                    font-weight: 700;
-                    line-height: 26px;
+            #description textarea {
+                width: 537px;
+                height: 130px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+            }
 
-                    img {
-                        border-radius: 50%;
-                    }
+            #collection button {
+                @include flex(row, center, flex-start, 20px);
+                width: 537px;
+                height: 70px;
+                font-size: 18px;
+                font-weight: 700;
+                border-radius: 10px;
+                padding: 20px;
+
+                img {
+                    border-radius: 50%;
                 }
             }
 
@@ -109,14 +90,10 @@
                 border-radius: 15px;
                 font-size: 26px;
                 font-weight: 700;
-                line-height: 34px;
-                margin-top: 20px;
                 color: snow;
                 background: $button-bg-color;
-
-                transition: transform 0.2s ease,
-                    box-shadow 0.3s ease,
-                    background-color 0.3s;
+                margin-top: 20px;
+                transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s;
                 box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
                 &:hover {
@@ -133,15 +110,14 @@
 
         .card-preview {
             @include card_hover($color: #FFFFFF);
-            padding: 15px;
             @include flex(column, center, space-between, 0);
             border-radius: 15px;
+            padding: 15px;
             box-shadow: $card-box-shadow;
 
             h5 {
                 font-size: 18px;
                 font-weight: 700;
-                line-height: 26px;
                 margin-bottom: 10px;
             }
 
@@ -157,15 +133,14 @@
                     @include flex(row, center, space-between, 156px);
 
                     h2 {
-                        font-size: 30.72px;
+                        font-size: 31px;
                         font-weight: 700;
-                        line-height: 44.38px;
+                        line-height: 44px;
                     }
 
                     h4 {
-                        font-size: 20.48px;
+                        font-size: 20px;
                         font-weight: 400;
-                        line-height: 27.31px;
                         color: grey;
                     }
                 }
@@ -182,18 +157,16 @@
                         }
 
                         h6 {
-                            font-size: 25.6px;
+                            font-size: 26px;
                             font-weight: 700;
-                            line-height: 39.26px;
+                            line-height: 39px;
                         }
                     }
 
-                    .right {
-                        h5 {
-                            font-size: 25.6px;
-                            font-weight: 700;
-                            line-height: 39.26px;
-                        }
+                    .right h5 {
+                        font-size: 26px;
+                        font-weight: 700;
+                        line-height: 39px;
                     }
                 }
             }
@@ -202,62 +175,19 @@
 }
 
 // Media Queries
-@media (max-width: $small) {
+@media (max-width: $x-large) {
     .create-new-nft {
-        padding: 50px 20px; // Reduce padding for small screens
+        padding: 90px 60px;
 
         h1 {
-            font-size: 32px; // Smaller heading
-            margin-bottom: 40px; // Adjust margin
+            font-size: 54px;
         }
 
-        .container {
-            @include flex(column, center, start, 0); // Stack items vertically
+        .container .form-container {
 
-            .form-container {
-                width: 100%; // Full width for the form container
-
-                input,
-                textarea {
-                    width: 100%; // Full width for inputs and textarea
-                    height: auto; // Adjust height
-                    margin-bottom: 20px; // Adjust margin
-                }
-
-                #image {
-                    width: 100%; // Make image responsive
-                    height: auto; // Adjust height
-                }
-
-                .create {
-                    width: 100%; // Full width for the create button
-                }
-            }
-
-            .card-preview {
-                width: 100%; // Make card preview full width
-                margin-top: 20px; // Add margin
-            }
-        }
-    }
-}
-
-@media (max-width: $medium) {
-    .create-new-nft {
-        padding: 80px 40px; // Slightly reduce padding
-
-        h1 {
-            font-size: 40px; // Adjust heading size for medium screens
-            margin-bottom: 60px; // Adjust margin
-        }
-
-        .container {
-            .form-container {
-
-                input,
-                textarea {
-                    width: 100%; // Ensure inputs and textareas are full width
-                }
+            input,
+            textarea {
+                width: 100%;
             }
         }
     }
@@ -265,23 +195,80 @@
 
 @media (max-width: $large) {
     .create-new-nft {
-        padding: 90px 60px; // Maintain a comfortable padding for large screens
+        padding: 80px 40px;
 
         h1 {
-            font-size: 54px; // Adjust heading size
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+
+        .container .form-container {
+
+            input,
+            textarea {
+                width: 100%;
+            }
         }
     }
 }
 
-@media (max-width: $x-large) {
+@media (max-width: $medium) {
     .create-new-nft {
+        padding: 60px 30px;
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
         .container {
+            @include flex(column, center, start, 0);
+
             .form-container {
 
                 input,
                 textarea {
-                    width: 100%; // Maintain full width
+                    width: 100%;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: $small) {
+    .create-new-nft {
+        padding: 50px 20px;
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            @include flex(column, center, start, 0);
+
+            .form-container {
+
+                input,
+                textarea {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 20px;
+                }
+
+                #image {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .create {
+                    width: 100%;
+                }
+            }
+
+            .card-preview {
+                width: 100%;
+                margin-top: 20px;
             }
         }
     }
