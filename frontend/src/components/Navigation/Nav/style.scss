@@ -2,7 +2,7 @@
 @import "../../../assets/styles/setting";
 
 .nav {
-    padding: 50px 200px;
+    padding: 50px 150px;
     @include flex(row, center, space-between, 0);
 
     .nav-left {

@@ -21,7 +21,7 @@ function FeaturedCard() {
     return (
         <div className="FeaturedCard">
             <div className="featured-nft-container">
-            <button className="close-button" onClick={handleClose}>✖</button>
+                <button className="close-button" onClick={handleClose}>✖</button>
                 <div className="nft-left-container">
                     <img src={selectedImage} alt="" width="518" height="580" />
                 </div>

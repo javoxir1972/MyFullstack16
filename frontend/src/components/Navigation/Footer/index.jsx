@@ -55,7 +55,7 @@ function Footer() {
                 <div className="right">
                     <span>👁️</span>
                     <span>🌙</span>
-                    <span>🔍</span>
+                    <span>🔍</span> 
                     <span>⭕</span>
                 </div>
             </div>

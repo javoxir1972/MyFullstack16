@@ -1,12 +1,6 @@
 @import "../../../assets/styles/resets";
 @import "../../../assets/styles/setting";
 
-$small: 600px;
-$medium: 950px;
-$large: 1200px;
-$x-large: 1350px;
-$xx-large: 1525px;
-
 .bottom {
     padding: 50px 150px;
 
@@ -102,7 +96,7 @@ $xx-large: 1525px;
     }
 
     .icons {
-        @include flex(row, center, flex-start, 67%);
+        @include flex(row, center, space-between, 0);
         padding-top: 50px;
 
         .left {
@@ -140,11 +134,11 @@ $xx-large: 1525px;
 
     /* Media Queries */
     @media (max-width: $xx-large) {
-        padding: 50px 120px;
+        padding: 50px 150px;
     }
 
     @media (max-width: $x-large) {
-        padding: 50px 80px;
+        padding: 50px 100px;
 
         .bottom-over .right div input {
             width: 280px;
@@ -152,10 +146,10 @@ $xx-large: 1525px;
     }
 
     @media (max-width: $large) {
-        padding: 40px 60px;
+        padding: 40px 80px;
 
         .bottom-over {
-            flex-direction: column;
+            flex-direction: row;
             align-items: start;
 
             .right {
@@ -165,8 +159,8 @@ $xx-large: 1525px;
         }
     }
 
-    @media (max-width: $medium) {
-        padding: 30px 40px;
+    @media (max-width: $medium) { 
+        padding: 30px 50px;
         flex-direction: column;
         gap: 20px;
 
@@ -180,7 +174,7 @@ $xx-large: 1525px;
     }
 
     @media (max-width: $small) {
-        padding: 20px 20px;
+        padding: 20px 30px;
 
         .bottom-over {
             flex-direction: column;

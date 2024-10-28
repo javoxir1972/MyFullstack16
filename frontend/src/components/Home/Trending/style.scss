@@ -29,9 +29,9 @@
     }
 
     .center-art {
-        display: grid; // Используем grid для компоновки
-        grid-template-columns: repeat(4, 1fr); // Изначально 4 карточки в ряд
-        gap: 20px; // Отступы между карточками
+        display: grid; // Using grid for layout
+        grid-template-columns: repeat(4, 1fr); // Initially 4 cards in a row
+        gap: 20px; // Gap between cards
 
         .nft-art {
             @include card_hover($button-bg-color);
@@ -41,7 +41,10 @@
             border-radius: 10px;
             box-shadow: $card-box-shadow;
 
-            img {
+            .topimg {
+                width: 100%; // Make the image fill the container width
+                border-radius: 10px;
+                object-fit: cover; // Optional: can be removed if not needed
                 border-radius: 10px;
             }
 
@@ -99,59 +102,89 @@
     }
 }
 
-// Media Queries
+@media (max-width: $xx-large) {
+    .trending-art {
+        padding: 50px 150px; // Match footer padding for xx-large screens
+    }
+}
+
 @media (max-width: $x-large) {
-    .center-art {
-        grid-template-columns: repeat(3, 1fr); // 3 карточки в ряд
+    .trending-art {
+        padding: 50px 100px; // Match footer padding for x-large screens
+
+        .center-art {
+            grid-template-columns: repeat(3, 1fr); // 3 cards in a row
+        }
     }
 }
 
 @media (max-width: $large) {
-    .center-art {
-        grid-template-columns: repeat(2, 1fr); // 2 карточки в ряд
+    .trending-art {
+        padding: 40px 80px; // Match footer padding for large screens
+
+        .center-art {
+            grid-template-columns: repeat(2, 1fr); // 2 cards in a row
+
+            .nft-art {
+                // Adjust card styles for better layout
+                padding: 10px 10px 15px 10px;
+            }
+        }
     }
 }
 
 @media (max-width: $medium) {
-    .header-art {
-        margin-bottom: 20px;
+    .trending-art {
+        padding: 30px 50px; // Match footer padding for medium screens
 
-        .header-art-left {
-            div {
-                font-size: 32px; // Уменьшаем размер заголовка
+        .header-art {
+            margin-bottom: 20px;
+
+            .header-art-left {
+                div {
+                    font-size: 32px; // Reduce header size
+                }
+            }
+
+            .header-art-right {
+                div {
+                    font-size: 14px; // Reduce text size
+                }
             }
         }
 
-        .header-art-right {
-            div {
-                font-size: 14px; // Уменьшаем размер текста
+        .center-art {
+            grid-template-columns: 1fr; // 1 card in a row
+
+            .nft-art {
+                padding: 10px 10px 15px 10px; // Adjust padding for small screens
             }
         }
-    }
-
-    .center-art {
-        grid-template-columns: 1fr; // 1 карточка в ряд
     }
 }
 
 @media (max-width: $small) {
-    .header-art {
-        margin-bottom: 20px;
+    .trending-art {
+        padding: 20px 30px; // Match footer padding for small screens
 
-        .header-art-left {
-            div {
-                font-size: 24px; // Уменьшаем размер заголовка
+        .header-art {
+            margin-bottom: 20px;
+
+            .header-art-left {
+                div {
+                    font-size: 24px; // Reduce header size
+                }
+            }
+
+            .header-art-right {
+                div {
+                    font-size: 12px; // Reduce text size
+                }
             }
         }
 
-        .header-art-right {
-            div {
-                font-size: 12px; // Уменьшаем размер текста
-            }
+        .center-art {
+            grid-template-columns: 1fr; // 1 card in a row
         }
-    }
-
-    .center-art {
-        grid-template-columns: 1fr; // 1 карточка в ряд
     }
 }

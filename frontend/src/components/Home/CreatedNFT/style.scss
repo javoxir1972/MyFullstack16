@@ -174,14 +174,15 @@
     }
 }
 
-// Media Queries
+@media (max-width: $xx-large) {
+    .create-new-nft {
+        padding: 50px 150px;
+    }
+}
+
 @media (max-width: $x-large) {
     .create-new-nft {
-        padding: 90px 60px;
-
-        h1 {
-            font-size: 54px;
-        }
+        padding: 50px 100px;
 
         .container .form-container {
 
@@ -195,18 +196,22 @@
 
 @media (max-width: $large) {
     .create-new-nft {
-        padding: 80px 40px;
+        padding: 40px 80px;
 
         h1 {
             font-size: 40px;
             margin-bottom: 60px;
         }
 
-        .container .form-container {
+        .container {
+            @include flex(column, center, start, 0);
 
-            input,
-            textarea {
-                width: 100%;
+            .form-container {
+
+                input,
+                textarea {
+                    width: 100%;
+                }
             }
         }
     }
@@ -214,7 +219,7 @@
 
 @media (max-width: $medium) {
     .create-new-nft {
-        padding: 60px 30px;
+        padding: 30px 50px;
 
         h1 {
             font-size: 36px;
@@ -237,7 +242,7 @@
 
 @media (max-width: $small) {
     .create-new-nft {
-        padding: 50px 20px;
+        padding: 20px 30px;
 
         h1 {
             font-size: 32px;

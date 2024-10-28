@@ -63,58 +63,37 @@
 }
 
 // Media Queries
-@media (max-width: $small) {
+@media (max-width: $xx-large) {
     .leader {
-        padding: 20px 10px; // Уменьшаем отступы
-
-        .leader-board {
-            margin-top: 20px; // Уменьшаем отступы
-            margin-bottom: 40px; // Уменьшаем отступы
-
-            h1 {
-                font-size: 28px; // Уменьшаем размер заголовка
-            }
-        }
-
-        .nft-images {
-            @include flex(column, center, space-evenly, 0); // Вертикальная компоновка
-
-            .nft {
-                margin: 20px 0; // Увеличиваем отступы между NFT
-
-                h1 {
-                    font-size: 20px; // Уменьшаем размер заголовка NFT
-                }
-
-                h4 {
-                    font-size: 16px; // Уменьшаем размер заголовка NFT
-                }
-            }
-        }
+        padding: 50px 150px;
     }
 }
 
-@media (max-width: $medium) {
+@media (max-width: $x-large) {
     .leader {
-        padding: 30px 20px; // Корректируем отступы
+        padding: 50px 100px;
 
         .leader-board {
-            margin-top: 30px; // Корректируем отступы
-            margin-bottom: 60px; // Корректируем отступы
+            margin-top: 30px; // Adjust margins
+            margin-bottom: 60px;
 
             h1 {
-                font-size: 32px; // Корректируем размер заголовка
+                font-size: 38px; // Adjust header size
             }
         }
 
         .nft-images {
+            @include flex(column, center, space-evenly, 0); // Change layout to vertical
+
             .nft {
+                margin: 20px 0; // Increase spacing between NFTs
+
                 h1 {
-                    font-size: 24px; // Корректируем размер заголовка NFT
+                    font-size: 24px; // Adjust NFT header size
                 }
 
                 h4 {
-                    font-size: 17px; // Корректируем размер заголовка NFT
+                    font-size: 17px; // Adjust NFT sub-header size
                 }
             }
         }
@@ -123,23 +102,90 @@
 
 @media (max-width: $large) {
     .leader {
-        padding: 40px 30px; // Корректируем отступы
+        padding: 40px 80px; // Adjust padding
 
         .leader-board {
             h1 {
-                font-size: 36px; // Корректируем размер заголовка
+                font-size: 36px; // Adjust header size
+            }
+        }
+
+        .nft-images {
+            .nft {
+                h1 {
+                    font-size: 22px; // Adjust NFT header size
+                }
+
+                h4 {
+                    font-size: 16px; // Adjust NFT sub-header size
+                }
             }
         }
     }
 }
 
-@media (max-width: $x-large) {
+@media (max-width: $medium) {
     .leader {
-        padding: 50px 40px; // Корректируем отступы
+        padding: 30px 50px; // Adjust padding
 
         .leader-board {
+            margin-top: 20px; // Adjust margins
+            margin-bottom: 40px;
+
             h1 {
-                font-size: 38px; // Корректируем размер заголовка
+                font-size: 32px; // Adjust header size
+            }
+        }
+
+        .nft-images {
+            @include flex(column, center, space-evenly, 0); // Maintain vertical layout
+
+            .nft {
+                margin: 15px 0; // Adjust spacing
+
+                h1 {
+                    font-size: 20px; // Adjust NFT header size
+                }
+
+                h4 {
+                    font-size: 15px; // Adjust NFT sub-header size
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $small) {
+    .leader {
+        padding: 20px 30px; // Adjust padding
+
+        .leader-board {
+            margin-top: 10px; // Adjust margins
+            margin-bottom: 20px;
+
+            h1 {
+                font-size: 28px; // Adjust header size
+            }
+        }
+
+        .nft-images {
+            @include flex(column, center, space-evenly, 0); // Maintain vertical layout
+
+            .nft {
+                margin: 10px 0; // Adjust spacing
+
+                h1 {
+                    font-size: 18px; // Adjust NFT header size
+                }
+
+                h4 {
+                    font-size: 14px; // Adjust NFT sub-header size
+                }
+
+                span {
+                    left: 50%; // Center the span on smaller screens
+                    transform: translateX(-50%);
+                }
             }
         }
     }

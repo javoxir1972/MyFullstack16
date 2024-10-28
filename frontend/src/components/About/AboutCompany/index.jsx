@@ -22,8 +22,6 @@ import human from "../../../assets/images/About/nft2.png"
 
 import TokyoDrift from "../../../assets/video/TokyoDrift.mp4"
 function AboutCompany() {
-    // let imgs1 = [Img1, Img2, Img3, Img4];
-    // let imgs2 = [Img4, Img3, Img2, Img1];
 
     return (
         <div className="AboutCompany-nft">
@@ -32,106 +30,127 @@ function AboutCompany() {
                     <div className="left">
                         <span>NFT MARKETPLACE</span>
                         <h1>About our Company NFT Distro</h1>
-                        <p>We are a cutting-edge company focused on the creation, <br /> promotion, and sale of non-fungible tokens (NFTs). Our marketplace <br /> offers a wide range of NFTs, from digital art and collectibles to <br /> gaming items and virtual real estate.</p>
+                        <p>
+                            We are a cutting-edge company focused on the creation, promotion, and
+                            sale of non-fungible tokens (NFTs). Our marketplace offers a wide
+                            range of NFTs, from digital art and collectibles to gaming items and
+                            virtual real estate.
+                        </p>
                     </div>
-
                     <div className="right">
-                        <img src={nft} alt="" width="455px" height="499px" />
+                        <img src={nft} alt="NFT example" width="455px" height="499px" />
                     </div>
                 </div>
                 <div className="AboutCompany-header-bottom">
                     <div className="left">
-                        <img src={human} alt="" width="615px" height="549px" />
+                        <img src={human} alt="Human with NFT" width="455px" height="499px" />
                     </div>
                     <div className="right">
-                        <h1>NFT Represent the future</h1>
-                        <p>We believe that NFTs represent the future of digital <br /> ownership and are excited to provide our customers with <br /> access to this revolutionary new market. Our platform is <br /> user-friendly and easy to navigate, making it simple for <br /> creators to upload and sell their NFTs and for buyers to <br /> discover and purchase unique digital assets.</p>
+                        <h1>NFT Represents the Future</h1>
+                        <p>
+                            We believe that NFTs represent the future of digital ownership and are
+                            excited to provide our customers with access to this revolutionary new
+                            market. Our platform is user-friendly and easy to navigate, making it
+                            simple
+                        </p>
                     </div>
                 </div>
             </div>
+ 
             <div className="AboutCompany-icons-nft">
-                <div className="AboutCompany-icons-nfts">
+                <div className="AboutCompany-icon">
                     <span>🔥</span>
-                    <h2>23.400</h2>
-                    <p>NFT's</p>
+                    <h2>23,400</h2>
+                    <p>NFTs</p>
                 </div>
-                <div className="AboutCompany-icons-collection">
+                <div className="AboutCompany-icon">
                     <span>⭐</span>
-                    <h2>8.000</h2>
-                    <p>Collection</p>
+                    <h2>8,000</h2>
+                    <p>Collections</p>
                 </div>
-                <div className="AboutCompany-icons-creators">
+                <div className="AboutCompany-icon">
                     <span>🌙</span>
-                    <h2>3.400</h2>
+                    <h2>3,400</h2>
                     <p>Creators</p>
                 </div>
-                <div className="AboutCompany-icons-volurme">
+                <div className="AboutCompany-icon">
                     <span>☀️</span>
                     <h2>$21B+</h2>
-                    <p>NFT's</p>
+                    <p>Volume</p>
                 </div>
             </div>
 
             <div className="AboutCompany-distro-nft">
                 <div className="distro">
                     <h1>NFT Distro</h1>
-                    <video controls loop muted>
-                        <source src={TokyoDrift} />
-                    </video>
+                    <div className="video-container">
+                        <video controls loop muted>
+                            <source src={TokyoDrift} type="video/mp4" />
+                            Ваш браузер не поддерживает видеоплеер.
+                        </video>
+                    </div>
                 </div>
             </div>
-            <div className="AboutCompany-our-partness-nft">
-                <h1>Our Partness</h1>
-                <div className="logos-top">
-                    <img src={logoipsum1} alt="" width="178px" height="54px" />
-                    <img src={logoipsum2} alt="" width="178px" height="54px" />
-                    <img src={logoipsum3} alt="" width="178px" height="54px" />
-                    <img src={logoipsum4} alt="" width="178px" height="54px" />
-                    <img src={logoipsum5} alt="" width="178px" height="54px" />
-                </div>
-                <div className="logos-bottom">
-                    <img src={logoipsum6} alt="" width="178px" height="54px" />
-                    <img src={logoipsum7} alt="" width="178px" height="54px" />
-                    <img src={logoipsum8} alt="" width="178px" height="54px" />
-                    <img src={logoipsum9} alt="" width="178px" height="54px" />
-                    <img src={logoipsum10} alt="" width="178px" height="54px" />
+
+            <div className="AboutCompany-our-partners-nft">
+                <h1>Our Partners</h1>
+                <div className="logos-container">
+                    <div className="logos-row">
+                        <img src={logoipsum1} alt="Partner 1" />
+                        <img src={logoipsum2} alt="Partner 2" />
+                        <img src={logoipsum3} alt="Partner 3" />
+                        <img src={logoipsum4} alt="Partner 4" />
+                        <img src={logoipsum5} alt="Partner 5" />
+                    </div>
+                    <div className="logos-row">
+                        <img src={logoipsum6} alt="Partner 6" />
+                        <img src={logoipsum7} alt="Partner 7" />
+                        <img src={logoipsum8} alt="Partner 8" />
+                        <img src={logoipsum9} alt="Partner 9" />
+                        <img src={logoipsum10} alt="Partner 10" />
+                    </div>
                 </div>
             </div>
-            <div className="AboutCompany-our-team-nft">
+
+            <div className="About-company-our-team-nft">
                 <h1>Our Team</h1>
                 <div className="team">
-                    <div>
-                        <img src={ourteam1} alt="" width="154px" height="154px" />
+                    <div className="team-member">
+                        <img src={ourteam1} alt="Floyd Miles" width="154" height="154" />
                         <h2>Floyd Miles</h2>
                         <p>Founder</p>
                     </div>
-                    <div>
-                        <img src={ourteam2} alt="" width="154px" height="154px" />
+                    <div className="team-member">
+                        <img src={ourteam2} alt="Eleanor Pena" width="154" height="154" />
                         <h2>Eleanor Pena</h2>
-                        <p>UI UX Desinger</p>
+                        <p>UI/UX Designer</p>
                     </div>
-                    <div>
-                        <img src={ourteam3} alt="" width="154px" height="154px" />
+                    <div className="team-member">
+                        <img src={ourteam3} alt="Kiss Dorka" width="154" height="154" />
                         <h2>Kiss Dorka</h2>
                         <p>UX Architect</p>
                     </div>
-                    <div>
-                        <img src={ourteam4} alt="" width="154px" height="154px" />
+                    <div className="team-member">
+                        <img src={ourteam4} alt="Nagy Timea" width="154" height="154" />
                         <h2>Nagy Timea</h2>
                         <p>Project Manager</p>
                     </div>
-                    <div>
-                        <img src={ourteam5} alt="" width="154px" height="154px" />
+                    <div className="team-member">
+                        <img src={ourteam5} alt="William Loko" width="154" height="154" />
                         <h2>William Loko</h2>
                         <p>Software Developer</p>
                     </div>
                 </div>
             </div>
-            <div className="AboutCompany-container-nft">
-                <div>
-                    <h1>Interested in joining us?</h1>
-                    <p>We're always looking for passionate individuals to help us achieve our goals. Apply <br /> today and let's build a better future together.</p>
-                    <button>Join us</button>
+
+            <div className="About-company-container-nft">
+                <div className="content">
+                    <h1>Interested in Joining Us?</h1>
+                    <p>
+                        We're always looking for passionate individuals to help us achieve our goals. <br />
+                        Apply today, and let's build a better future together.
+                    </p>
+                    <button className="join-button">Join us</button>
                 </div>
             </div>
 

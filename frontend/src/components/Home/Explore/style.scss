@@ -115,24 +115,38 @@
       }
     }
   }
-}
 
-// Media Queries
-@media (max-width: $x-large) { // <= 1350px
-  .explore-nft {
-    padding: 80px 60px;
+  // Media Queries
+  @media (max-width: $xx-large) {
+    padding: 50px 150px; // Padding for xx-large screens
   }
-}
 
-@media (max-width: $large) { // <= 1200px
-  .explore-nft {
-    padding: 70px 50px;
+  @media (max-width: $x-large) {
+    padding: 50px 100px; // Padding for x-large screens
+
+    .bottom-over .right div input {
+      width: 280px; // Adjust input width
+    }
   }
-}
 
-@media (max-width: $medium) { // <= 950px
-  .explore-nft {
-    padding: 60px 40px;
+  @media (max-width: $large) {
+    padding: 40px 80px; // Padding for large screens
+
+    .bottom-over {
+      flex-direction: row; // Layout for bottom-over
+      align-items: start;
+
+      .right {
+        margin-top: 20px; // Adjust margin
+        gap: 30px; // Adjust gap
+      }
+    }
+  }
+
+  @media (max-width: $medium) {
+    padding: 30px 50px; // Padding for medium screens
+    flex-direction: column; // Column layout
+    gap: 20px; // Gap between elements
 
     .header-nft {
       .left h1 {
@@ -141,14 +155,20 @@
     }
 
     .nft {
-      @include grid(3, 1fr, 25px); // 3 columns
+      @include grid(3, 1fr, 25px); // Change to 3 columns for medium screens
+    }
+
+    .bottom-over .left h1 {
+      font-size: 36px; // Adjust left header size
+    }
+
+    .bottom-over .right div input {
+      width: 100%; // Adjust input width for medium screens
     }
   }
-}
 
-@media (max-width: $small) { // <= 600px
-  .explore-nft {
-    padding: 40px 20px;
+  @media (max-width: $small) {
+    padding: 20px 30px; // Padding for small screens
 
     .header-nft {
       @include flex(column, center, flex-start, 0);
@@ -165,7 +185,7 @@
     }
 
     .nft {
-      @include grid(2, 1fr, 20px); // 2 columns for small screens
+      @include grid(2, 1fr, 20px); // Change to 2 columns for small screens
 
       .nft-container {
         margin-bottom: 30px; // Reduce bottom margin
@@ -177,6 +197,25 @@
 
       button {
         margin-bottom: 10px; // Add space between buttons
+      }
+    }
+
+    .bottom-over {
+      flex-direction: column; // Change layout to column for small screens
+      gap: 10px;
+
+      .icons {
+        padding-top: 20px;
+        flex-direction: column; // Stack icons vertically
+      }
+
+      .right {
+        align-items: center; // Center align items
+        text-align: center; // Center text
+
+        div input {
+          width: 90%; // Adjust input width for small screens
+        }
       }
     }
   }

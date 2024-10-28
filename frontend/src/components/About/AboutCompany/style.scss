@@ -1,16 +1,10 @@
 @import "../../../assets/styles/resets";
 @import "../../../assets/styles/setting";
 
-$small: 600px;
-$medium: 950px;
-$large: 1200px;
-$x-large: 1350px;
-$xx-large: 1525px;
-
 .AboutCompany-nft {
     .AboutCompany-header-nft {
         @include flex(column, center, space-between, 50px);
-        padding: 80px 200px;
+        padding: 80px 180px;
 
         .AboutCompany-header-top {
             @include flex(row, center, space-between, 100px);
@@ -69,295 +63,496 @@ $xx-large: 1525px;
                 }
             }
         }
+
+        @media (max-width: $xx-large) {
+            // 1525px
+            padding: 80px 150px;
+
+            .AboutCompany-header-top {
+                @include flex(column, center, space-between, 50px);
+            }
+
+            .AboutCompany-header-bottom {
+                @include flex(column, center, space-between, 50px);
+            }
+        }
+
+        @media (max-width: $x-large) {
+            // 1350px
+            padding: 60px 100px;
+
+            .AboutCompany-header-top {
+                @include flex(column, center, space-between, 30px);
+
+                .left {
+                    h1 {
+                        font-size: 48px;
+                        line-height: 60px;
+                    }
+                }
+            }
+
+            .AboutCompany-header-bottom {
+                @include flex(column, center, space-between, 30px);
+
+                .right {
+                    h1 {
+                        font-size: 48px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $large) {
+            // 1200px
+            padding: 50px 70px;
+
+            .AboutCompany-header-top {
+                @include flex(column, center, space-between, 20px);
+
+                .left {
+                    h1 {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            .AboutCompany-header-bottom {
+                @include flex(column, center, space-between, 20px);
+
+                .right {
+                    h1 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $medium) {
+            // 950px
+            padding: 30px 50px;
+
+            .AboutCompany-header-top {
+                .left {
+                    h1 {
+                        font-size: 36px;
+                    }
+                }
+
+                .right {
+                    img {
+                        width: 100%; // Адаптируем изображение
+                        height: auto; // Поддерживаем соотношение сторон
+                    }
+                }
+            }
+
+            .AboutCompany-header-bottom {
+                .left {
+                    img {
+                        width: 100%; // Адаптируем изображение
+                        height: auto; // Поддерживаем соотношение сторон
+                    }
+                }
+
+                .right {
+                    h1 {
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $small) {
+            // 600px
+            padding: 20px 30px;
+
+            .AboutCompany-header-top {
+                @include flex(column, center, space-between, 20px);
+            }
+
+            .AboutCompany-header-bottom {
+                @include flex(column, center, space-between, 20px);
+            }
+
+            .left,
+            .right {
+                text-align: center;
+            }
+
+            .left {
+                h1 {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .right {
+                h1 {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.AboutCompany-icons-nft {
+    @include flex(row, center, space-between, 0);
+    padding: 90px 250px;
+
+    span {
+        font-size: 81px;
+        padding: 20px 0;
     }
 
-    .AboutCompany-icons-nft {
-        @include flex(row, center, space-between, 0);
-        padding: 90px 250px;
+    h2 {
+        font-size: 26px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+
+    .AboutCompany-icon {
+        @include flex(column, center, space-between, 0);
+    }
+
+    @media (max-width: $xx-large) {
+        padding: 70px 200px;
 
         span {
-            font-size: 81px;
-            padding: 20px 0;
+            font-size: 70px; // Уменьшение размера шрифта для больших экранов
         }
 
         h2 {
-            font-size: 26px;
-            line-height: 40px;
-            font-weight: 700;
+            font-size: 24px; // Уменьшение заголовка
         }
 
         p {
+            font-size: 16px; // Уменьшение текста
+        }
+    }
+
+    @media (max-width: $x-large) {
+        padding: 60px 150px;
+
+        span {
+            font-size: 65px; // Дальнейшее уменьшение
+        }
+
+        h2 {
+            font-size: 22px; // Дальнейшее уменьшение заголовка
+        }
+
+        p {
+            font-size: 15px; // Дальнейшее уменьшение текста
+        }
+    }
+
+    @media (max-width: $large) {
+        padding: 50px 100px;
+
+        span {
+            font-size: 60px; // Подгонка под средние экраны
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding: 40px 50px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column; // Вертикальная компоновка
+
+        span {
+            font-size: 50px; // Уменьшение для мобильных устройств
+            padding: 10px 0;
+        }
+
+        h2 {
             font-size: 18px;
-            line-height: 26px;
-            font-weight: 400;
         }
 
-        .AboutCompany-icons-nfts,
-        .AboutCompany-icons-collection,
-        .AboutCompany-icons-creators,
-        .AboutCompany-icons-volurme {
-            @include flex(column, center, space-between, 0);
+        p {
+            font-size: 14px;
         }
     }
 
-    .AboutCompany-distro-nft {
-        padding: 50px 200px;
-        background-color: $leaderboard-bg-color;
-        position: relative;
-        height: 700px;
-        margin-bottom: 200px;
+    @media (max-width: $small) {
+        padding: 20px 30px;
 
-        .distro {
-            text-align: center;
+        span {
+            font-size: 40px; // Дополнительное уменьшение
+        }
 
-            h1 {
-                padding: 30px 0;
-                color: $main-bg-color;
-                font-size: 59px;
-                line-height: 72px;
-                font-weight: 500;
-            }
+        h2 {
+            font-size: 16px;
+        }
 
-            video {
-                width: 80%;
-                position: absolute;
-                left: 10%;
-                border-radius: 20px;
-            }
+        p {
+            font-size: 12px; // Уменьшение текста
         }
     }
+}
 
-    .AboutCompany-our-partness-nft {
-        padding: 80px 200px;
+.AboutCompany-distro-nft {
+    padding: 50px 200px;
+    background-color: $leaderboard-bg-color;
+    position: relative;
+    height: 700px;
+    margin-bottom: 200px;
+
+    .distro {
+        text-align: center;
 
         h1 {
-            text-align: center;
-            padding-bottom: 80px;
-            font-size: 59px;
-            line-height: 72px;
-            font-weight: 700;
-        }
-
-        .logos-top {
-            @include flex(row, center, space-between, 0);
-            margin-bottom: 30px;
-        }
-
-        .logos-bottom {
-            @include flex(row, center, space-between, 0);
-        }
-    }
-
-    .AboutCompany-our-team-nft {
-        padding: 80px 200px;
-
-        h1 {
-            text-align: center;
-            padding-bottom: 80px;
+            padding: 30px 0;
+            color: $main-bg-color;
             font-size: 59px;
             line-height: 72px;
             font-weight: 500;
         }
 
-        .team {
-            @include flex(row, center, space-between, 0);
+        video {
+            width: 80%;
+            position: absolute;
+            left: 10%;
+            border-radius: 20px;
+        }
+    }
+}
 
-            div {
-                @include flex(column, center, space-between, 0);
+.AboutCompany-our-partners-nft {
+    padding: 80px 200px;
+    margin: 40px 0; // Отступы сверху и снизу
+    text-align: center; // Центрирование текста
+
+    h1 {
+        font-size: 59px;
+        line-height: 72px;
+        font-weight: 700;
+        margin-bottom: 80px; // Отступ снизу для заголовка 
+    }
+
+    .logos-container {
+        @include flex(column, center, space-between, 20px);
+
+        .logos-row {
+            @include flex(row, center, space-between, 50px);
+            margin-bottom: 20px;
+
+            img {
+                width: 178px;
+                height: 54px;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    @media (max-width: $xx-large) {
+        padding: 70px 180px;
+
+        h1 {
+            font-size: 52px; // Уменьшение размера заголовка
+        }
+
+        .logos-row {
+            @include flex(row, center, space-between, 40px); // Уменьшение отступов между логотипами
+
+            img {
+                width: 160px; // Уменьшение ширины логотипов
+                height: 50px; // Уменьшение высоты логотипов
+            }
+        }
+    }
+
+    @media (max-width: $x-large) {
+        padding: 60px 150px;
+
+        h1 {
+            font-size: 48px; // Дальнейшее уменьшение
+        }
+
+        .logos-row {
+            @include flex(row, center, space-between, 30px);
+
+            img {
+                width: 150px; // Уменьшение ширины логотипов
+                height: 45px; // Уменьшение высоты логотипов
+            }
+        }
+    }
+
+    @media (max-width: $large) {
+        padding: 50px 100px;
+
+        h1 {
+            font-size: 44px; // Уменьшение заголовка
+        }
+
+        .logos-row {
+            @include flex(row, center, space-between, 20px);
+
+            img {
+                width: 140px; // Уменьшение ширины логотипов
+                height: 40px; // Уменьшение высоты логотипов
+            }
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding: 40px 50px;
+
+        h1 {
+            font-size: 36px; // Уменьшение заголовка для мобильных
+        }
+
+        .logos-container {
+            @include flex(column, center, space-between, 10px);
+
+            .logos-row {
+                @include flex(row, center, space-between, 10px);
 
                 img {
-                    margin-bottom: 20px;
-                    border-radius: 50%;
-                }
-
-                h2 {
-                    font-size: 26px;
-                    line-height: 40px;
-                    font-weight: 700;
-                }
-
-                p {
-                    font-size: 18px;
-                    line-height: 26px;
-                    font-weight: 400;
+                    width: 120px; // Уменьшение ширины логотипов
+                    height: 36px; // Уменьшение высоты логотипов
                 }
             }
         }
     }
 
-    .AboutCompany-container-nft {
-        @include flex();
-        padding: 50px;
+    @media (max-width: $small) {
+        padding: 20px 30px;
 
-        div {
+        h1 {
+            font-size: 28px; // Дополнительное уменьшение заголовка
+            margin-bottom: 40px; // Уменьшение отступа
+        }
+
+        .logos-container {
+            @include flex(column, center, space-between, 5px);
+
+            .logos-row {
+                @include flex(row, center, space-between, 5px);
+
+                img {
+                    width: 100px; // Уменьшение ширины логотипов
+                    height: 30px; // Уменьшение высоты логотипов
+                }
+            }
+        }
+    }
+}
+
+.About-company-our-team-nft {
+    padding: 80px 200px;
+    text-align: center;
+    margin: 50px 0;
+
+    h1 {
+        text-align: center;
+        padding-bottom: 80px;
+        font-size: 59px;
+        line-height: 72px;
+        font-weight: 500;
+
+    }
+
+    .team {
+        @include flex(row, center, space-between, 30px);
+        flex-wrap: wrap;
+
+        .team-member {
+            padding: 10px 0;
             text-align: center;
-            padding: 50px 235px;
-            border-radius: 30px;
-            color: $main-bg-color;
-            background-color: $leaderboard-bg-color;
 
-            h1 {
-                font-size: 70px;
-                line-height: 85px;
-                font-weight: 500;
-            }
-
-            p {
-                text-align: center;
-                font-size: 18px;
-                line-height: 26px;
-                font-weight: 400;
-            }
-
-            button {
-                width: 281px;
-                height: 70px;
-                margin-top: 30px;
-                font-size: 26px;
-                line-height: 34px;
-                font-weight: 700;
-                color: $main-bg-color;
-                background: $button-bg-color;
-                padding: 15px;
-                border-radius: 16px;
-
-                transition: transform 0.5s ease,
-                    box-shadow 0.5s ease,
-                    background-color 0.5s;
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-
-                &:hover {
-                    text-shadow: 3px 3px 3px #427388;
-                    box-shadow: 0 12px 20px rgba(255, 0, 0, 0.2);
-                }
-
-                &:active {
-                    transform: scale(0.95);
-                    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.2);
-                }
+            img {
+                width: 155px;
+                height: 155px;
+                border-radius: 50%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }
         }
     }
 }
 
-// ======================= Media Queries for Each Div ==================
+.About-company-container-nft {
+    @include flex(row, center, space-between, 0);
+    padding: 50px;
 
-// For small devices (600px and below)
-@media (max-width: $small) {
-    .AboutCompany-header-nft {
-        padding: 40px 20px; // Reduce padding for small screens
-    }
+    .content {
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px 220px;
+        border-radius: 30px;
+        color: $main-bg-color;
+        background-color: $leaderboard-bg-color;
 
-    .AboutCompany-icons-nft {
-        padding: 40px 20px; // Reduce padding
-    }
 
-    .AboutCompany-distro-nft {
-        padding: 20px 20px; // Reduce padding
-    }
+        h1 {
+            margin-bottom: 16px;
+            font-size: 70px;
+            line-height: 85px;
+            font-weight: 500;
 
-    .AboutCompany-our-partness-nft,
-    .AboutCompany-our-team-nft {
-        padding: 40px 20px; // Reduce padding
-    }
+        }
 
-    .AboutCompany-container-nft {
-        padding: 20px; // Reduce padding
-    }
-}
+        p {
+            text-align: center;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+        }
 
-// For medium devices (601px to 950px)
-@media (min-width: $small) and (max-width: $medium) {
-    .AboutCompany-header-nft {
-        padding: 60px 20px; // Adjust padding for medium screens
-    }
+        .join-button {
+            width: 281px;
+            height: 70px;
+            margin-top: 30px;
 
-    .AboutCompany-icons-nft {
-        padding: 60px 20px; // Adjust padding
-    }
+            font-size: 26px;
+            line-height: 34px;
+            font-weight: 700;
 
-    .AboutCompany-distro-nft {
-        padding: 40px 20px; // Adjust padding
-    }
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            color: $main-bg-color;
+            background: $button-bg-color;
 
-    .AboutCompany-our-partness-nft,
-    .AboutCompany-our-team-nft {
-        padding: 60px 20px; // Adjust padding
-    }
+            transition: transform 0.5s ease,
+                box-shadow 0.5s ease,
+                background-color 0.5s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
-    .AboutCompany-container-nft {
-        padding: 30px; // Adjust padding
-    }
-}
+            &:hover {
+                text-shadow: 3px 3px 3px #427388;
+                box-shadow: 0 12px 20px rgba(255, 0, 0, 0.2);
+            }
 
-// For large devices (951px to 1200px)
-@media (min-width: $medium) and (max-width: $large) {
-    .AboutCompany-header-nft {
-        padding: 80px 100px; // Increase padding slightly
-    }
-
-    .AboutCompany-icons-nft {
-        padding: 90px 50px; // Adjust padding
-    }
-
-    .AboutCompany-distro-nft {
-        padding: 50px 100px; // Adjust padding
-    }
-
-    .AboutCompany-our-partness-nft,
-    .AboutCompany-our-team-nft {
-        padding: 80px 100px; // Adjust padding
-    }
-
-    .AboutCompany-container-nft {
-        padding: 50px 100px; // Adjust padding
-    }
-}
-
-// For extra large devices (1201px to 1350px)
-@media (min-width: $large) and (max-width: $x-large) {
-    .AboutCompany-header-nft {
-        padding: 80px 150px; // Adjust padding
-    }
-
-    .AboutCompany-icons-nft {
-        padding: 90px 100px; // Adjust padding
-    }
-
-    .AboutCompany-distro-nft {
-        padding: 50px 150px; // Adjust padding
-    }
-
-    .AboutCompany-our-partness-nft,
-    .AboutCompany-our-team-nft {
-        padding: 80px 150px; // Adjust padding
-    }
-
-    .AboutCompany-container-nft {
-        padding: 50px 150px; // Adjust padding
-    }
-}
-
-// For extra extra large devices (1351px and above)
-@media (min-width: $x-large) {
-    .AboutCompany-header-nft {
-        padding: 80px 200px; // Default padding
-    }
-
-    .AboutCompany-icons-nft {
-        padding: 90px 250px; // Default padding
-    }
-
-    .AboutCompany-distro-nft {
-        padding: 50px 200px; // Default padding
-    }
-
-    .AboutCompany-our-partness-nft,
-    .AboutCompany-our-team-nft {
-        padding: 80px 200px; // Default padding
-    }
-
-    .AboutCompany-container-nft {
-        padding: 50px 200px; // Default padding
+            &:active {
+                transform: scale(0.95);
+                box-shadow: 0 5px 10px rgba(255, 0, 0, 0.2);
+            }
+        }
     }
 }

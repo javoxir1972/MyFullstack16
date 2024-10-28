@@ -99,8 +99,8 @@
                         background: $button-bg-color;
 
                         transition: transform 0.2s ease,
-                                    box-shadow 0.3s ease,
-                                    background-color 0.3s;
+                            box-shadow 0.3s ease,
+                            background-color 0.3s;
                         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
                         &:hover {
@@ -120,40 +120,22 @@
 }
 
 // Media Queries
-@media (max-width: $small) {
+@media (max-width: $xx-large) {
     .featured {
-        padding: 40px 20px; // Уменьшаем отступы
-
-        .featured-header {
-            h1 {
-                font-size: 30px; // Уменьшаем размер заголовка
-            }
-        }
-
-        .featured-nft {
-            @include flex(column, center, flex-start, 20px); // Вертикальная компоновка
-
-            .featured-nft-container {
-                @include flex(column, flex-start, center, 20px); // Вертикальная компоновка для контейнера
-                width: 100%; // Полная ширина на маленьких экранах
-
-                padding: 10px; // Уменьшаем внутренние отступы
-            }
-        }
+        padding: 50px 150px; // Adjusted padding for xx-large screens
     }
 }
 
-@media (max-width: $medium) {
+@media (max-width: $x-large) {
     .featured {
-        .featured-header {
-            h1 {
-                font-size: 35px; // Уменьшаем размер заголовка
-            }
-        }
+        padding: 50px 100px; // Adjusted padding for x-large screens
 
         .featured-nft {
+            @include flex(column, center, flex-start, 20px); // Vertical layout
+
             .featured-nft-container {
-                padding: 15px 20px; // Уменьшаем отступы
+                padding: 10px 20px; // Reduced padding for containers
+                width: 100%; // Full width on small screens
             }
         }
     }
@@ -161,25 +143,53 @@
 
 @media (max-width: $large) {
     .featured {
+        padding: 40px 80px; // Adjusted padding for large screens
+
         .featured-header {
             h1 {
-                font-size: 38px; // Корректируем размер заголовка
+                font-size: 38px; // Slightly smaller header
             }
         }
     }
 }
 
-@media (max-width: $x-large) {
+@media (max-width: $medium) {
     .featured {
+        padding: 30px 50px; // Adjusted padding for medium screens
+
         .featured-header {
             h1 {
-                font-size: 40px; // Оставляем размер заголовка прежним
+                font-size: 36px; // Smaller header for medium screens
             }
         }
 
         .featured-nft {
+            @include flex(column, center, flex-start, 20px); // Vertical layout
+
             .featured-nft-container {
-                padding: 15px 30px; // Корректируем отступы
+                padding: 10px; // Further reduced padding
+                width: 100%; // Full width on medium screens
+            }
+        }
+    }
+}
+
+@media (max-width: $small) {
+    .featured {
+        padding: 20px 30px; // Further reduced padding for small screens
+
+        .featured-header {
+            h1 {
+                font-size: 30px; // Reduced header size
+            }
+        }
+
+        .featured-nft {
+            @include flex(column, center, flex-start, 20px); // Vertical layout
+
+            .featured-nft-container {
+                padding: 10px; // Reduced padding
+                width: 100%; // Full width on small screens
             }
         }
     }

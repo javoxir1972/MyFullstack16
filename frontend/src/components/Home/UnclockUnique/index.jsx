@@ -41,7 +41,7 @@ function UnclockUnique() {
                     <div className="modal">
                         <h6>Sign with your wallet!</h6>
                         <p>
-                            Sign Wallet NFT, the secure digital storage for <br /> 
+                            Sign Wallet NFT, the secure digital storage for <br />
                             unique assets, take a step towards the future
                         </p>
 
