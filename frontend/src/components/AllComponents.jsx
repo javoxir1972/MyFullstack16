@@ -11,6 +11,7 @@ import Explore from './Home/Explore'
 import CreateNewNFT from './Home/CreatedNFT/Createnewnft'
 import TrendingArt from './Home/Trending'
 import Frequently from './FAQ/Frequently'
+import Authentication from './Authentication'
 
 function AllComponents(props) {
     const location = useLocation()
@@ -39,10 +40,10 @@ function AllComponents(props) {
                 <Route path="/" element={<Explore />} />
                 <Route path="/create-new-nft" element={<CreateNewNFT />} />
 
-
                 <Route path="/" element={<TrendingArt />} />
                 <Route path="/faq" element={<Frequently />} />
 
+                <Route path="/login" element={<Authentication />} />
             </Route>
         </Routes>
     )

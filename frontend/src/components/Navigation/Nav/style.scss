@@ -38,57 +38,75 @@
             }
         }
     }
-}
 
-$small: 600px;
-$medium: 950px;
-$large: 1200px;
-$x-large: 1350px;
-$xx-large: 1525px;
+    /* Media Queries */
+    @media (max-width: $xx-large) {
+        padding: 50px 150px;
+    }
 
-@media (max-width: $small) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
+    @media (max-width: $x-large) {
+        padding: 50px 100px;
 
-        .nav-left,
+        .nav-left input {
+            margin-left: 50px;
+            width: 250px;
+        }
+
         .nav-right {
+            gap: 40px;
+        }
+    }
+
+    @media (max-width: $large) {
+        padding: 40px 80px;
+
+        .nav-left input {
+            margin-left: 30px;
+            width: 220px;
+        }
+
+        .nav-right {
+            gap: 30px;
+        }
+    }
+
+    @media (max-width: $medium) {
+        padding: 30px 50px;
+        flex-direction: column;
+        gap: 20px;
+
+        .nav-left {
             width: 100%;
             justify-content: center;
 
-            a {
-                margin: 10px 0;
+            input {
+                margin-left: 0;
+                width: 100%;
             }
         }
-    }
-}
 
-@media (min-width: $small) and (max-width: $medium) {
-    .nav {
-        .nav-left {
-            input {
-                width: 200px; // Example of responsive input width
-            }
+        .nav-right {
+            width: 100%;
+            justify-content: space-evenly;
         }
     }
-}
 
-@media (min-width: $medium) and (max-width: $large) {
-    .nav {
-        .nav-left {
-            input {
-                width: 250px; // Example of wider input
-            }
+    @media (max-width: $small) {
+        padding: 20px 30px;
+
+        .nav-left,
+        .nav-right {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
         }
-    }
-}
 
-@media (min-width: $large) {
-    .nav {
-        .nav-left {
-            input {
-                width: 300px; // Example of widest input
-            }
+        .nav-left input {
+            width: 90%;
+        }
+
+        .nav-right a {
+            padding: 10px 0;
         }
     }
 }

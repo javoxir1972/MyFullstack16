@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import "./style.scss"
+import "./style.scss";
 
 function Nav() {
     return (
@@ -16,9 +16,9 @@ function Nav() {
                 </div>
             </div>
             <div className="nav-right">
-                <NavLink to="/" activeclassname="active">Explore</NavLink> 
-                <NavLink to="Trending" activeclassname="active">Trending</NavLink>
-                <NavLink to="FAQ" activeclassname="active">FAQ</NavLink>
+                <NavLink to="/" activeclassname="active">Explore</NavLink>
+                <NavLink to="/login" activeclassname="active">Login</NavLink>
+                <NavLink to="/FAQ" activeclassname="active">FAQ</NavLink>
             </div>
         </div>
     );

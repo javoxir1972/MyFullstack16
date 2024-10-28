@@ -29,17 +29,17 @@
     }
 
     .center-art {
-        @include flex(row, center, space-between, 0);
-        flex-wrap: wrap; // Позволяет карточкам обтекать друг друга на меньших экранах
+        display: grid; // Используем grid для компоновки
+        grid-template-columns: repeat(4, 1fr); // Изначально 4 карточки в ряд
+        gap: 20px; // Отступы между карточками
 
         .nft-art {
             @include card_hover($button-bg-color);
             background-color: $main-bg-color;
-            box-shadow: $card-box-shadow;
             color: $card-color;
             padding: 10px 15px 20px 10px;
             border-radius: 10px;
-            margin: 10px; // Отступы между карточками
+            box-shadow: $card-box-shadow;
 
             img {
                 border-radius: 10px;
@@ -100,94 +100,58 @@
 }
 
 // Media Queries
-@media (max-width: $small) {
-    .trending-art {
-        padding: 40px 20px; // Уменьшаем отступы
-
-        .header-art {
-            margin-bottom: 20px; // Уменьшаем отступы
-
-            .header-art-left {
-                div {
-                    font-size: 24px; // Уменьшаем размер заголовка
-                }
-            }
-
-            .header-art-right {
-                div {
-                    font-size: 12px; // Уменьшаем размер текста
-                }
-            }
-        }
-
-        .center-art {
-            @include flex(column, center, space-between, 0); // Вертикальная компоновка для мобильных
-
-            .nft-art {
-                width: 100%; // Ширина карточек на мобильных устройствах
-                margin: 10px 0; // Увеличиваем отступы между карточками
-            }
-        }
-    }
-}
-
-@media (max-width: $medium) {
-    .trending-art {
-        padding: 60px 30px; // Корректируем отступы
-
-        .header-art {
-            .header-art-left {
-                div {
-                    font-size: 32px; // Корректируем размер заголовка
-                }
-            }
-
-            .header-art-right {
-                div {
-                    font-size: 14px; // Корректируем размер текста
-                }
-            }
-        }
-
-        .center-art {
-            .nft-art {
-                width: calc(50% - 20px); // Две карточки в ряд с отступами
-                margin: 10px; // Отступ между карточками
-            }
-        }
+@media (max-width: $x-large) {
+    .center-art {
+        grid-template-columns: repeat(3, 1fr); // 3 карточки в ряд
     }
 }
 
 @media (max-width: $large) {
-    .trending-art {
-        padding: 70px 40px; // Корректируем отступы
-
-        .header-art {
-            .header-art-left {
-                div {
-                    font-size: 36px; // Корректируем размер заголовка
-                }
-            }
-
-            .header-art-right {
-                div {
-                    font-size: 15px; // Корректируем размер текста
-                }
-            }
-        }
+    .center-art {
+        grid-template-columns: repeat(2, 1fr); // 2 карточки в ряд
     }
 }
 
-@media (max-width: $x-large) {
-    .trending-art {
-        padding: 80px 50px; // Корректируем отступы
+@media (max-width: $medium) {
+    .header-art {
+        margin-bottom: 20px;
 
-        .header-art {
-            .header-art-left {
-                div {
-                    font-size: 38px; // Корректируем размер заголовка
-                }
+        .header-art-left {
+            div {
+                font-size: 32px; // Уменьшаем размер заголовка
             }
         }
+
+        .header-art-right {
+            div {
+                font-size: 14px; // Уменьшаем размер текста
+            }
+        }
+    }
+
+    .center-art {
+        grid-template-columns: 1fr; // 1 карточка в ряд
+    }
+}
+
+@media (max-width: $small) {
+    .header-art {
+        margin-bottom: 20px;
+
+        .header-art-left {
+            div {
+                font-size: 24px; // Уменьшаем размер заголовка
+            }
+        }
+
+        .header-art-right {
+            div {
+                font-size: 12px; // Уменьшаем размер текста
+            }
+        }
+    }
+
+    .center-art {
+        grid-template-columns: 1fr; // 1 карточка в ряд
     }
 }
