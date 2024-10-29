@@ -2,7 +2,7 @@
 @import "../../../assets/styles/setting";
 
 .frequently-wrapper {
-    padding: 50px 150px;
+    padding: 50px 180px;
 
     .top {
         @include flex(column, center, space-between, 0);
@@ -180,109 +180,113 @@
 }
 
 // Media Queries
-@media (max-width: $small) {
+@media (max-width: $xx-large) {
     .frequently-wrapper {
-        padding: 20px 30px;
-
-        .top {
-            h1 {
-                font-size: 36px;
-                line-height: 44px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-
-            input {
-                width: 100%;
-            }
-        }
-
-        .general .container {
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .text {
-            margin-right: 0;
-            margin-left: 0;
-            text-align: center;
-        }
+        padding: 50px 150px;
     }
 
-    .center-art {
-        flex-direction: column;
-
-        .nft-art {
-            width: 100%;
-            padding: 10px;
-        }
-    }
-}
-
-@media (max-width: $medium) {
-    .frequently-wrapper {
-        padding: 30px;
-
-        .top {
-            h1 {
-                font-size: 48px;
-            }
-
-            p {
-                font-size: 17px;
-            }
-
-            input {
-                width: 80%;
-            }
+    .top {
+        h1 {
+            font-size: 60px; // Adjust if necessary
         }
 
-        .general .container {
-            width: 90%;
-        }
-
-        .text {
-            margin-right: 20px;
-        }
-    }
-}
-
-@media (max-width: $large) {
-    .frequently-wrapper {
-        .top {
-            h1 {
-                font-size: 54px;
-            }
-
-            input {
-                width: 60%;
-            }
+        input {
+            width: 100%; // Full width for inputs
         }
     }
 }
 
 @media (max-width: $x-large) {
     .frequently-wrapper {
+        padding: 50px 100px;
+
         .top {
-            h1 {
-                font-size: 55px;
+            input {
+                width: 280px; // Set specific width for inputs
+            }
+        }
+
+        .general {
+            @include flex(column, center, space-between, 0);
+
+            .container {
+                width: 100%;
+            }
+        }
+
+        .nft {
+            .center-art {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                img{
+                    width: 100%;
+                }
             }
 
-            p {
-                font-size: 18px;
+        }
+
+    }
+}
+
+@media (max-width: $large) {
+    .frequently-wrapper {
+        padding: 40px 80px;
+
+        .bottom-over {
+            flex-direction: row;
+            align-items: start;
+
+            .right {
+                margin-top: 20px;
+                gap: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: $medium) {
+    .frequently-wrapper {
+        padding: 30px 50px;
+        flex-direction: column;
+        gap: 20px;
+
+        .top {
+            h1 {
+                font-size: 36px; // Adjust the font size
             }
 
             input {
-                width: 70%;
+                width: 100%; // Full width for inputs
+            }
+        }
+    }
+}
+
+@media (max-width: $small) {
+    .frequently-wrapper {
+        padding: 20px 30px;
+
+
+
+        .bottom-over {
+            flex-direction: column;
+            gap: 10px;
+
+            .icons {
+                padding-top: 20px;
+                flex-direction: column;
+            }
+
+            .right {
+                align-items: center;
+                text-align: center;
+
+                div input {
+                    width: 90%; // Adjust width for small screens
+                }
             }
         }
 
-        .center-art {
-            flex-direction: row;
-            justify-content: space-around;
-        }
+
     }
 }

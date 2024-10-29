@@ -195,7 +195,7 @@
 
 
     .nft {
-        @include grid(4, 1fr, 30px);
+        @include grid($columns: 4, $size: 1fr, $gap: 30px);
         padding-top: 30px;
 
         .nft-container {
@@ -281,92 +281,140 @@
     }
 
 
-    // Media Queries
-    @media (max-width: $small) {
-        padding: 20px;
 
-        .title {
-            h1 {
-                font-size: 40px;
-                line-height: 50px;
-            }
+    @media (max-width: $xx-large) {
+        padding: 50px 150px;
 
-            input {
-                width: 100%;
-            }
-        }
-
-        .header-nft {
-            .left h1 {
-                font-size: 25px;
-            }
-        }
-
-        .buttons {
-            button {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-        }
-
-        .nft {
-            @include grid(1, 1fr, 10px); // 1 column layout
-        }
     }
 
-    @media (max-width: $medium) {
+    @media (max-width: $x-large) {
+        padding: 50px 100px;
+
+        .nft {
+            @include grid($columns: 3, $size: 1fr, $gap: 30px);
+        }
+
+        .bottom-over .right div input {
+            width: 280px;
+        }
+
+        .title h1 {
+            font-size: 65px;
+        }
+
+        .header-nft .left h1 {
+            font-size: 35px;
+        }
+
+    }
+
+    @media (max-width: $large) {
+        padding: 40px 80px;
+
+        .nft {
+            @include grid($columns: 2, $size: 1fr, $gap: 30px);
+        }
+
         .collections-grid {
             @include grid($columns: 2, $size: 1fr, $gap: 15px); // 2 columns layout
         }
 
-        .title {
-            h1 {
-                font-size: 50px;
-            }
+
+        .bottom-over {
+            flex-direction: row;
+            align-items: start;
         }
 
-        .header-nft {
-            .left h1 {
-                font-size: 30px;
-            }
+        .buttons button {
+            width: 30%; // 3 buttons in a row
         }
 
-        .buttons {
-            button {
-                width: 48%; // 2 buttons in a row
-            }
+        .right {
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        .title h1 {
+            font-size: 60px;
+        }
+
+    }
+
+    @media (max-width: $medium) {
+        padding: 30px 50px;
+
+        .nft {
+            @include grid($columns: 1, $size: 1fr, $gap: 30px);
+        }
+
+        .bottom-over {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .bottom-over .left h1 {
+            font-size: 36px;
+        }
+
+        .bottom-over .right div input {
+            width: 100%;
+        }
+
+        .header-nft .left h1 {
+            font-size: 30px;
+        }
+
+        .buttons button {
+            width: 48%; // 2 buttons in a row
+        }
+
+        .title h1 {
+            font-size: 50px;
         }
     }
 
-    @media (max-width: $large) {
-        .collections-grid {
-            @include grid($columns: 3, $size: 1fr, $gap: 20px); // 3 columns layout
-        }
+    @media (max-width: $small) {
+        padding: 20px 30px;
 
-        .title {
-            h1 {
-                font-size: 60px;
+        .bottom-over {
+            flex-direction: column;
+            gap: 10px;
+
+            .icons {
+                padding-top: 20px;
+                flex-direction: column;
+            }
+
+            .right {
+                align-items: center;
+                text-align: center;
+
+                div input {
+                    width: 90%;
+                }
             }
         }
 
-        .buttons {
-            button {
-                width: 30%; // 3 buttons in a row
-            }
+        .title h1 {
+            font-size: 40px;
+            line-height: 50px;
         }
+
+        .header-nft .left h1 {
+            font-size: 25px;
+        }
+
+        .buttons button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
     }
 
-    @media (max-width: $x-large) {
-        .title {
-            h1 {
-                font-size: 65px; // Adjust as needed
-            }
-        }
 
-        .header-nft {
-            .left h1 {
-                font-size: 35px; // Adjust as needed
-            }
-        }
-    }
+
+
+
+
+
 }

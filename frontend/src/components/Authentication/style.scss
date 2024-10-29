@@ -9,13 +9,13 @@
     }
 
     .form-wrapper {
+        @include card_hover($color: none);
         border-radius: 20px;
-        box-shadow: 2px 2px 20px 2px #FF8F77,
-            -2px -2px 20px 2px #FF8F77;
-        width: 40%;
+        box-shadow: 2px 2px 20px 2px #ff8f77, -2px -2px 20px 2px #ff8f77;
+        width: 90%; // По умолчанию форма занимает почти всю ширину
+        max-width: 600px; // Ограничение на больших экранах
         margin: 50px auto;
-        padding: 50px;
-
+        padding: 40px;
 
         p {
             color: grey;
@@ -26,7 +26,7 @@
 
             header {
                 text-align: center;
-                margin-bottom: 50px;
+                margin-bottom: 40px;
 
                 p {
                     margin-top: 20px;
@@ -40,21 +40,24 @@
                 button {
                     width: 100%;
                     display: block;
-                    padding: 20px;
+                    padding: 15px;
                     background-color: transparent;
+                    border-radius: 10px;
                 }
 
                 input {
-                    border: 2px solid #9096B250;
+                    border: 2px solid #9096b250;
                 }
 
                 button {
                     background: $button-bg-color;
                     color: snow;
                     font-size: 1.2em;
+                    transition: 0.3s;
 
                     &:hover {
                         text-shadow: 3px 3px 3px #427388;
+                        transform: scale(1.05);
                     }
                 }
 
@@ -77,6 +80,38 @@
                     text-shadow: 2px 2px 2px #427388;
                 }
             }
+        }
+    }
+
+    // Адаптивные стили для разных экранов
+    @media (min-width: 600px) {
+        .form-wrapper {
+            width: 80%; // Уменьшается ширина на маленьких экранах
+        }
+    }
+
+    @media (min-width: 950px) {
+        .form-wrapper {
+            width: 60%; // Оптимизация для средних экранов
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .form-wrapper {
+            width: 50%; // Ширина для более крупных экранов
+            padding: 50px;
+        }
+    }
+
+    @media (min-width: 1350px) {
+        .form-wrapper {
+            width: 40%; // Оптимизация под большие экраны
+        }
+    }
+
+    @media (min-width: 1525px) {
+        .form-wrapper {
+            width: 35%; // Ограничение на самых больших экранах
         }
     }
 }

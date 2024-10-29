@@ -57,9 +57,12 @@ function BecomeArtist(props) {
                         </div>
                     </div>
                 </div>
-                <h1>Become Artist</h1>
-                <p>Welcome to the world of NFTs, Creator! We're excited to see your unique <br /> digital assets come to life. Create, share, and let your imagination run wild.</p>
-                <button>Upload</button>
+                <div className="center">
+                    <h1>Become Artist</h1>
+                    <p>Welcome to the world of NFTs, Creator! We're excited to see your unique <br /> digital assets come to life. Create, share, and let your imagination run wild.</p>
+                    <button>Upload</button>
+
+                </div>
                 <div className="right">
                     <div className="nft-container3">
                         <div className="img-wrapper">
@@ -102,11 +105,13 @@ function BecomeArtist(props) {
                         </div>
                     </div>
                 </div>
+
             </div>
+
             <div className="become-center">
                 <div className="become-top">
                     <div className="left">
-                        <div>
+                        <div className="imgleft">
                             <img src={ava} alt="" width="135px" height="135px" />
                             <h2>Create your nft</h2>
                         </div>
@@ -124,7 +129,7 @@ function BecomeArtist(props) {
                         <button>Explore now</button>
                     </div>
                     <div className="right">
-                        <div>
+                        <div className="imgright">
                             <img src={ava} alt="" width="135px" height="135px" />
                             <h2>Upload your NFT</h2>
                         </div>
@@ -132,7 +137,7 @@ function BecomeArtist(props) {
                 </div>
                 <div className="become-bottom">
                     <div className="left">
-                        <div>
+                        <div className="imgleft">
                             <img src={ava} alt="" width="135px" height="135px" />
                             <h2>Share your NFT</h2>
                         </div>

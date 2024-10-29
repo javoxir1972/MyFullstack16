@@ -56,7 +56,7 @@ function AboutCompany() {
                     </div>
                 </div>
             </div>
- 
+
             <div className="AboutCompany-icons-nft">
                 <div className="AboutCompany-icon">
                     <span>🔥</span>
