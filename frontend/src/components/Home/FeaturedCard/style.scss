@@ -1,63 +1,57 @@
 @import "../../../assets/styles/resets";
 @import "../../../assets/styles/setting";
 
+
 .FeaturedCard {
-    padding: 50px 150px;
+    padding: 50px 110px;
 
     .close-button {
         top: -7%;
         right: -0.4%;
         position: absolute;
+        cursor: pointer;
     }
 
     .featured-nft-container {
-        @include flex(row, flex-start, space-between, 50px);
-        padding: 15px 35px 15px 15px;
+        @include flex(row, flex-start, space-between, 30px);
         color: $card-color;
         background-color: $main-bg-color;
+        border-radius: 15px;
         position: relative;
+        padding: 20px;
 
         .nft-left-container {
             img {
-                border-radius: 10px;
+                border-radius: 20px;
+                width: 518px;
+                height: 580px;
             }
         }
 
         .nft-right-container {
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding: 10px 0;
 
             .nft-right-titles {
                 @include flex(column, start, flex-start, 15px);
                 color: $card-color;
 
                 h1 {
-                    font-size: 40px;
+                    font-size: 36px;
                     font-weight: 700;
-                    line-height: 40px;
-                    letter-spacing: -0.003em;
+                    line-height: 44px;
+                    margin-bottom: 10px;
                 }
 
                 h6 {
                     font-size: 15px;
-                    font-weight: 400;
                     line-height: 23px;
                     color: $main-grey-color;
                     margin-bottom: 20px;
                 }
 
                 .nft-left-ava {
-                    @include flex(start, center, space-between, 40px);
-                    margin-bottom: 30px;
-
-                    h6 {
-                        font-size: 15px;
-                        font-weight: 400;
-                        line-height: 23px;
-                        text-align: left;
-                        color: $main-grey-color;
-                        margin-bottom: 5px;
-                    }
+                    @include flex(row, center, space-between, 30px);
+                    margin-bottom: 25px;
 
                     .left,
                     .right {
@@ -67,10 +61,10 @@
                         .richard,
                         .michael {
                             @include flex(row, center, start, 15px);
-                            padding: 10px 15px 10px 20px;
+                            padding: 10px 15px;
                             border-radius: 15px;
-                            box-shadow: 0px 4.57px 54.85px 0px rgba(197, 197, 197, 0.25);
-                            background: rgba(255, 255, 255, 1);
+                            box-shadow: 0px 4px 20px rgba(197, 197, 197, 0.25);
+                            background: #fff;
 
                             img {
                                 border-radius: 50%;
@@ -81,38 +75,33 @@
                                 font-size: 18px;
                                 font-weight: 700;
                                 line-height: 26px;
-                                text-align: left;
                             }
                         }
                     }
                 }
 
                 .description {
+                    margin-bottom: 15px;
+
                     h6 {
                         font-size: 15px;
-                        font-weight: 400;
                         line-height: 23px;
-                        text-align: left;
                         margin-bottom: 5px;
                     }
 
                     p {
                         font-size: 18px;
-                        font-weight: 400;
                         line-height: 26px;
-                        text-align: left;
                     }
                 }
 
                 .nft-price {
-                    @include flex(row, flex-start, space-between, 50px);
+                    @include flex(row, flex-start, space-between, 30px);
                     margin-bottom: 15px;
 
                     h6 {
                         font-size: 15px;
-                        font-weight: 400;
                         line-height: 23px;
-                        text-align: left;
                         margin-bottom: 10px;
                     }
 
@@ -120,26 +109,22 @@
                         font-size: 26px;
                         font-weight: 500;
                         line-height: 34px;
-                        text-align: left;
                     }
                 }
 
                 .btn {
-                    width: 437px;
+                    width: 100%; // По умолчанию кнопка занимает всю ширину
+                    max-width: 437px;
                     height: 62px;
                     padding: 15px;
                     border-radius: 15px;
                     font-size: 15px;
                     font-weight: 700;
-                    line-height: 23px;
                     color: snow;
                     background: $button-bg-color;
                     border: none;
                     cursor: pointer;
-
-                    transition: transform 0.2s ease,
-                        box-shadow 0.3s ease,
-                        background-color 0.3s;
+                    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s;
                     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
                     &:hover {
@@ -155,96 +140,81 @@
             }
         }
     }
-}
 
-// Media Queries
-@media (max-width: $small) {
-    .FeaturedCard {
-        padding: 20px 10px; // Уменьшаем отступы
+    @media (max-width: $xx-large) {
+        padding: 70px 180px;
+    }
+
+    @media (max-width: $x-large) {
+        padding: 60px 150px;
 
         .featured-nft-container {
-            @include flex(column, center, flex-start, 20px); // Вертикальная компоновка
+            @include flex(row, flex-start, space-between, 50px);
 
-            padding: 10px; // Уменьшаем внутренние отступы
-        }
-
-        .nft-right-container {
-            .nft-right-titles {
-                h1 {
-                    font-size: 28px; // Уменьшаем размер заголовка
-                }
-
-                h6 {
-                    font-size: 12px; // Уменьшаем размер подзаголовка
-                }
-
-                .description {
-                    h6 {
-                        font-size: 12px; // Уменьшаем размер заголовка описания
-                    }
-
-                    p {
-                        font-size: 16px; // Уменьшаем размер текста описания
-                    }
-                }
-
-                .nft-price {
-                    h5 {
-                        font-size: 22px; // Уменьшаем размер цены
-                    }
-                }
-
-                .btn {
-                    width: 100%; // Полная ширина кнопки
-                    height: 50px; // Уменьшаем высоту кнопки
+            .nft-left-container {
+                img {
+                    width: auto;
+                    height: auto;
                 }
             }
         }
     }
-}
 
-@media (max-width: $medium) {
-    .FeaturedCard {
+    @media (max-width: $large) {
+        padding: 50px 100px;
+
         .featured-nft-container {
-            padding: 10px 20px; // Корректируем отступы
-        }
+            @include flex(column, center space-between, 50px);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
-        .nft-right-container {
-            .nft-right-titles {
-                h1 {
-                    font-size: 32px; // Уменьшаем размер заголовка
+            .nft-right-container {
+                .nft-right-titles {
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
                 }
             }
         }
     }
-}
 
-@media (max-width: $large) {
-    .FeaturedCard {
+    @media (max-width: $medium) {
+        padding: 40px 50px;
+
         .featured-nft-container {
-            padding: 15px 25px; // Корректируем отступы
-        }
+            @include flex(column, center space-between, 50px);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
-        .nft-right-container {
-            .nft-right-titles {
-                h1 {
-                    font-size: 36px; // Корректируем размер заголовка
+            .nft-right-container {
+                .nft-right-titles {
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
                 }
             }
         }
     }
-}
 
-@media (max-width: $x-large) {
-    .FeaturedCard {
+    @media (max-width: $small) {
+        padding: 20px 30px;
+
         .featured-nft-container {
-            padding: 15px 30px; // Корректируем отступы
-        }
+            @include flex(column, center space-between, 50px);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
-        .nft-right-container {
-            .nft-right-titles {
-                h1 {
-                    font-size: 38px; // Корректируем размер заголовка
+            .nft-right-container {
+                .nft-right-titles {
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
                 }
             }
         }

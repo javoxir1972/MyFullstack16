@@ -23,12 +23,14 @@ function FeaturedCard() {
             <div className="featured-nft-container">
                 <button className="close-button" onClick={handleClose}>✖</button>
                 <div className="nft-left-container">
-                    <img src={selectedImage} alt="" width="518" height="580" />
+                    <img className="imleft" src={selectedImage} alt="" width="518" height="580" />
                 </div>
                 <div className="nft-right-container">
                     <div className="nft-right-titles">
-                        <h1>{product.hedtitle}</h1>
-                        <h6>{product.data}</h6>
+                        <div>
+                            <h1>{product.hedtitle}</h1>
+                            <h6>{product.data}</h6>
+                        </div>
                         <div className="nft-left-ava">
                             <div className="left">
                                 <h6>{product.collection}</h6>

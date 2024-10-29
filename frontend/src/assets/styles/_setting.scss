@@ -34,11 +34,11 @@ $danger-modal-bg: radial-gradient(circle, $light 50%, #a084c5);
 
 
 // ------------------ @media sizes ------------------
-$small: 600px;
-$medium: 950px;
-$large: 1200px;
-$x-large: 1350px;
 $xx-large: 1525px;
+$x-large: 1350px;
+$large: 1200px;
+$medium: 950px;
+$small: 600px;
 
 
 @media (max-width: $small) {}
